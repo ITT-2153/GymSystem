@@ -113,5 +113,15 @@
   <ItemGroup>
     <Resource Include="Resources\OmegaWhite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c00a162d-8210-43e7-b7a5-ff4b03e43840}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{0cad483e-3ab9-44e3-aeb0-fdfb6eab6db2}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
