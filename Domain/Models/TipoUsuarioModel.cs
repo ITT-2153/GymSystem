@@ -83,7 +83,9 @@ namespace Domain.Models
         }
         public IEnumerable<TipoUsuarioModel> FindBy(string filter)
         {
-            return listTiposUsuarios.FindAll(e => e.id.Contains(filter) || e.nombre.Contains(filter) || e.tipoUsuario.Contains(filter));
+            return listTiposUsuarios.FindAll(e => e.id.Contains(filter) || 
+                                                  e.nombre.Contains(filter) || 
+                                                  e.tipoUsuario.Contains(filter));
         }
     }
 }
