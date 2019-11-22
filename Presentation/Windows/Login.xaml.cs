@@ -24,5 +24,10 @@ namespace Presentation
         {
             InitializeComponent();
         }
+
+        private void LoginWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

@@ -12,14 +12,14 @@
             </ResourceDictionary.MergedDictionaries>
             <!--PRIMARY-->
             <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#000000"/>
-            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#24272a"/>
-            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#ce0e2d"/>
-            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#ce0e2d"/>
-            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#015f92"/>
-            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#FFFFFF"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#FF5D5C5C"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#E7B531"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#E7B531"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#000000"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#000000"/>
             <!--ACCENT-->
-            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#005db9"/>
-            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#005db9"/>
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#FFC428"/>
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#FFC428"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
