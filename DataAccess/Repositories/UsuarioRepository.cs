@@ -24,7 +24,7 @@ namespace DataAccess.Repositories
             insert = "INSERT INTO TipoUsuario values(@Nombre, @TipoUsuario)";
             update = "UPDATE TipoUsuario SET nombre=@Nombre, tusuario=@TipoUsuario WHERE id=@Id";
             delete = "DELETE FROM TipoUsuario WHERE id=@Id";
-            login = "SELECT";
+            login = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id WHERE Usuario.apodo =@Apodo AND Usuario.pin =@Pin";
         }
         public int Add(Usuario entity)
         {
@@ -66,12 +66,12 @@ namespace DataAccess.Repositories
             return listUsuarios;
         }
 
-        public bool Login(string user, string pin)
+        public bool Login(string apodo, string pin)
         {
             parameters = new List<SqlParameter>
             {
-                new SqlParameter("@Nombre", user),
-                new SqlParameter("@Contrasena", pin)
+                new SqlParameter("@Apodo", apodo),
+                new SqlParameter("@Pin", pin)
             };
             return Login(login);
         }

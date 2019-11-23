@@ -112,6 +112,10 @@ namespace Domain.Models
             }
             return listUsuarios;
         }
+        public bool LoginUser(string user, string pin)
+        {
+            return usuarioRepository.Login(user, pin);
+        }
         public IEnumerable<UsuarioModel> FindBy(string filter)
         {
             return listUsuarios.FindAll(e => e.id.Contains(filter) ||
