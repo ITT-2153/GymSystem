@@ -30,9 +30,9 @@
             <Rectangle Fill="#eff3f8"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="362" Width="830" Margin="0,118,0,0"/>
             <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/OmegaBlack.png" Margin="1,6,701,416"/>
             <Ellipse Fill="Gray" HorizontalAlignment="Left" Height="50" Margin="715,10,0,0" VerticalAlignment="Top" Width="50"/>
-            <Label x:Name="HomeLbl" Content="Inicio •" Foreground="Black" Margin="10,123,770,334" FontSize="12" FontFamily="roboto"/>
-            <Label x:Name="OptionLbl" Content="Dashboard" Foreground="Gray" Margin="51,123,710,334" FontSize="12" FontFamily="roboto"/>
-            <Grid x:Name="ContainerGrid" Margin="10,146,10,10" Background="White"/>
+            <Label x:Name="HomeLbl" Content="Inicio •" Foreground="Black" Margin="10,124,770,333" FontSize="12" FontFamily="roboto"/>
+            <Label x:Name="OptionLbl" Content="Dashboard" Foreground="Gray" Margin="51,124,710,333" FontSize="12" FontFamily="roboto"/>
+            <Grid x:Name="ContainerGrid" Margin="10,151,10,10" Background="White"/>
         </Grid>
     </Border>
 </Window>

@@ -12,6 +12,7 @@ namespace Common.Cache
         public static string Nombre { get; set; }
         public static string ApellidoPaterno { get; set; }
         public static string ApellidoMaterno { get; set; }
+        public static string Apodo { get; set; }
         public static string ImgPath { get; set; }
         public static int IdTipoUsuario { get; set; }
         public static string NombreTipoUsuario { get; set; }

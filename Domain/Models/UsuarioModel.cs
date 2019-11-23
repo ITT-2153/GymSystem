@@ -19,6 +19,7 @@ namespace Domain.Models
         private string nombre;
         private string apellidoPaterno;
         private string apellidoMaterno;
+        private string apodo;
         private string pin;
         private string imgPath;
         private string correo;
@@ -31,6 +32,7 @@ namespace Domain.Models
         public string Nombre { get => nombre; set => nombre = value; }
         public string ApellidoPaterno { get => apellidoPaterno; set => apellidoPaterno = value; }
         public string ApellidoMaterno { get => apellidoMaterno; set => apellidoMaterno = value; }
+        public string Apodo { get => apodo; set => apodo = value; }
         public string Pin { get => pin; set => pin = value; }
         public string ImgPath { get => imgPath; set => imgPath = value; }
         public string Correo { get => correo; set => correo = value; }
@@ -53,6 +55,7 @@ namespace Domain.Models
                     Nombre = nombre,
                     ApellidoPaterno = apellidoPaterno,
                     ApellidoMaterno = apellidoMaterno,
+                    Apodo = apodo,
                     Pin = pin,
                     ImgPath = imgPath,
                     Correo = correo,
@@ -98,6 +101,7 @@ namespace Domain.Models
                     nombre = item.Nombre,
                     apellidoPaterno = item.ApellidoPaterno,
                     apellidoMaterno = item.ApellidoMaterno,
+                    apodo = item.Apodo,
                     pin = item.Pin,
                     imgPath = item.ImgPath,
                     correo = item.Correo,
@@ -114,6 +118,7 @@ namespace Domain.Models
                                              e.nombre.Contains(filter) ||
                                              e.ApellidoPaterno.Contains(filter) ||
                                              e.apellidoMaterno.Contains(filter) ||
+                                             e.apodo.Contains(filter) ||
                                              e.pin.Contains(filter) ||
                                              e.correo.Contains(filter) ||
                                              e.idTipoUsuario.Contains(filter) ||

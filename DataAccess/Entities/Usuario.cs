@@ -12,6 +12,7 @@ namespace DataAccess.Entities
         public string Nombre;
         public string ApellidoPaterno;
         public string ApellidoMaterno;
+        public string Apodo;
         public string Pin;
         public string ImgPath;
         public string Correo;
