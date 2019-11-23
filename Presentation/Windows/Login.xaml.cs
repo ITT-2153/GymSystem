@@ -43,7 +43,7 @@ namespace Presentation
                     var validLogin = usuario.LoginUser(UsuarioTextBox.Text, PinTextBox.Password);
                     if (validLogin == true)
                     {
-                        if (UserCache.TipoUsuario == Convert.ToChar(UserType.Cliente))
+                        if (UserCache.TipoUsuario == Convert.ToChar(UserType.Administrador))
                         {
                             Dashboard window1 = new Dashboard();
                             window1.Show();

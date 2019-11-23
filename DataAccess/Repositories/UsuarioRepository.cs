@@ -20,10 +20,10 @@ namespace DataAccess.Repositories
 
         public UsuarioRepository()
         {
-            select = "SELECT * FROM TipoUsuario";
-            insert = "INSERT INTO TipoUsuario values(@Nombre, @TipoUsuario)";
-            update = "UPDATE TipoUsuario SET nombre=@Nombre, tusuario=@TipoUsuario WHERE id=@Id";
-            delete = "DELETE FROM TipoUsuario WHERE id=@Id";
+            select = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id";
+            insert = "INSERT INTO";
+            update = "UPDATE";
+            delete = "DELETE FROM Usuario WHERE id=@Id";
             login = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id WHERE Usuario.apodo =@Apodo AND Usuario.pin =@Pin";
         }
         public int Add(Usuario entity)

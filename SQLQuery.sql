@@ -71,9 +71,13 @@ INSERT INTO TipoUsuario VALUES
 ('Cliente','C')
 
 INSERT INTO Usuario VALUES 
-('Jose Luis', 'Cuevas', 'Landa','admin','1234','EstoEsUnDirectorio','cuevas.joseluis@outlook.com',2)
+('Jose Luis', 'Cuevas', 'Landa','admin','1234','EstoEsUnDirectorio','cuevas.joseluis@outlook.com',1)
 
 INSERT INTO Cliente VALUES
 (1,'03/04/1997',60.50,160)
 
-SELECT Id
+--SELECTS
+
+-- // Login //
+SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario
+	   INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id 
