@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentation.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,22 @@ namespace Presentation.Windows
         public Dashboard()
         {
             InitializeComponent();
+        }
+        public void SwitchScreen(object sender, string title)
+        {
+            var screen = ((UserControl)sender);
+            if (screen != null)
+            {
+                ContainerGrid.Children.Clear();
+                ContainerGrid.Children.Add(screen);
+                OptionLbl.Content = title;
+            }
+        }
+
+        private void Usuarios_Click(object sender, RoutedEventArgs e)
+        {
+            UsuarioUControl control = new UsuarioUControl();
+            SwitchScreen(control, "Usuarios");
         }
     }
 }

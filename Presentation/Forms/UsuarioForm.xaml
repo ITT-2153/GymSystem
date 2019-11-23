@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Presentation.Forms.UsuarioForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Presentation.Forms"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="325" HorizontalAlignment="Left" Width="298">
+            <Grid>
+                <Separator Background="LightGray" Margin="0,35,0,256"/>
+                <Label x:Name="TitleLabel" Content="DATOS DE USUARIO" Margin="0,0,0,274" FontSize="20"/>
+                <Ellipse Fill="Gray" Margin="75,56,82,136" HorizontalAlignment="Center" Width="125"/>
+                <TextBox x:Name="UsuarioBox" materialDesign:HintAssist.Hint="Usuario" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,178,0,79" />
+                <TextBox x:Name="PinBox" materialDesign:HintAssist.Hint="Pin" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,237,0,23" />
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="450" HorizontalAlignment="Left" Width="470" Margin="330,0,0,0">
+            <Grid>
+                <Separator Background="LightGray" Margin="0,35,0,378"/>
+                <Label x:Name="Title2Label" Content="DATOS PERSONALES" Margin="0,0,0,399" FontSize="20"/>
+                <TextBox x:Name="NombreTextBox" materialDesign:HintAssist.Hint="Nombre" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,56,0,324" />
+                <TextBox x:Name="APaternoTextBox" materialDesign:HintAssist.Hint="Apellido Paterno" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,110,0,270" />
+                <TextBox x:Name="AMaternoTextBox" materialDesign:HintAssist.Hint="Apellido Materno" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,164,0,216" />
+                <TextBox x:Name="CorreoTextBox" materialDesign:HintAssist.Hint="Correo" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,218,0,162" />
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

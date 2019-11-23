@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Presentation.Forms;
+using Presentation.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,17 @@ namespace Presentation.UserControls
         public UsuarioUControl()
         {
             InitializeComponent();
+        }
+        private void AgregarBtn_Click(object sender, RoutedEventArgs e)
+        {
+            UsuarioForm form = new UsuarioForm();
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(Dashboard))
+                {
+                    (window as Dashboard).SwitchScreen(form, "Usuarios • Agregar usuario");
+                }
+            }
         }
     }
 }

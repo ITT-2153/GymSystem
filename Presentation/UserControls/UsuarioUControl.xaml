@@ -12,7 +12,7 @@
             <Grid>
                 <Separator Background="LightGray" Margin="0,35,0,378"/>
                 <Label x:Name="TitleLabel" Content="Usuarios" Margin="0,0,0,399" FontSize="20"/>
-                <Button Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="674,5,10,397" Foreground="White">
+                <Button x:Name="AgregarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="674,5,10,397" Foreground="White" HorizontalAlignment="Right" Click="AgregarBtn_Click">
                     <Grid>
                         <TextBlock Text="Agregar" Margin="-3,0,-22,0"/>
                         <materialDesign:PackIcon Kind="Add" Height="18" Width="18" Margin="-29,1,0,0" />
@@ -22,9 +22,14 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                         <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
-                        <DataGridTextColumn Header="Contraseña" Binding="{Binding Contrasena}"/>
+                        <DataGridTextColumn Header="APaterno" Binding="{Binding APaterno}"/>
+                        <DataGridTextColumn Header="AMaterno" Binding="{Binding AMaterno}"/>
+                        <DataGridTextColumn Header="Apodo" Binding="{Binding Apodo}"/>
+                        <DataGridTextColumn Header="Pin" Binding="{Binding Pin}"/>
+                        <DataGridTextColumn Header="ImgPath" Binding="{Binding ImgPath}"/>
                         <DataGridTextColumn Header="Correo" Binding="{Binding Correo}"/>
-                        <DataGridTextColumn Header="TipoUsuario" Binding="{Binding TipoUsuario}"/>
+                        <DataGridTextColumn Header="IdTipoUsuario" Binding="{Binding IdTipoUsuario}"/>
+                        <DataGridTextColumn Header="NombreTipoUsuario" Binding="{Binding NombreTipoUsuario}"/>
                         <DataGridTemplateColumn Header="Acciones">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
