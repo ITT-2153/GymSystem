@@ -22,7 +22,11 @@
         </Menu>
         <!--<Rectangle Fill="#eff3f8" VerticalAlignment="Top" HorizontalAlignment="Stretch" Width="830" Margin="0,118,0,0" Height="362"/>-->
         <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/OmegaBlack.png" Margin="18,6,0,0" Width="70" Height="54" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Ellipse Fill="Gray" Height="50" Margin="0,10,30,0" Width="50" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Ellipse Height="50" Margin="0,10,30,0" Width="50" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Resources/imgDefaultUser.png" Stretch="Fill"/>
+            </Ellipse.Fill>
+        </Ellipse>
         <Label x:Name="HomeLbl" Content="Inicio •" Foreground="Black" Margin="20,124,762,349" FontSize="12" FontFamily="roboto"/>
         <Label x:Name="OptionLbl" Content="Dashboard" Foreground="Gray" Margin="64,124,697,349" FontSize="12" FontFamily="roboto" x:FieldModifier="public"/>
         <Grid x:Name="ContainerGrid" Margin="20,151,20,10" Background="Transparent" x:FieldModifier="public"/>

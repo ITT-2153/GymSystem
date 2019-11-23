@@ -13,8 +13,10 @@
             <!--PRIMARY-->
             <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#000000"/>
             <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#FF5D5C5C"/>
+            <!--COLOR USADO PARA EN SELECCION DE TEXBOX Y COLOR NORMAL DE BOTONES-->
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#E7B531"/>
-            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#E7B531"/>
+            <!--COLOR USADO PARA EN TEXTO SOBRE CONTROLES BOTONES-->
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#000000"/>
             <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#000000"/>
             <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#000000"/>
             <!--ACCENT-->

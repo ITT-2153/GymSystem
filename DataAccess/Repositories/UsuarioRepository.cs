@@ -61,6 +61,16 @@ namespace DataAccess.Repositories
                 {
                     Id = Convert.ToInt32(item[0]),
                     Nombre = item[1].ToString(),
+                    ApellidoPaterno = item[2].ToString(),
+                    ApellidoMaterno = item[3].ToString(),
+                    Apodo = item[4].ToString(),
+                    Pin = item[5].ToString(),
+                    ImgPath = item[6].ToString(),
+                    Correo = item[7].ToString(),
+                    IdTipoUsuario = Convert.ToInt32(item[8]),
+                    NombreTipoUsuario = item[9].ToString(),
+                    TipoUsuario = Convert.ToChar(item[10])
+
                 });
             }
             return listUsuarios;

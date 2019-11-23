@@ -1,4 +1,5 @@
-﻿using Presentation.Forms;
+﻿using Domain.Models;
+using Presentation.Forms;
 using Presentation.Windows;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,11 @@ namespace Presentation.UserControls
     /// </summary>
     public partial class UsuarioUControl : UserControl
     {
+        private UsuarioModel usuario = new UsuarioModel();
         public UsuarioUControl()
         {
             InitializeComponent();
+            ListUsuarios();
         }
         private void AgregarBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -35,6 +38,17 @@ namespace Presentation.UserControls
                 {
                     (window as Dashboard).SwitchScreen(form, "Usuarios • Agregar usuario");
                 }
+            }
+        }
+        private void ListUsuarios()
+        {
+            try
+            {
+                UsuarioDataGrid.ItemsSource = usuario.GetAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

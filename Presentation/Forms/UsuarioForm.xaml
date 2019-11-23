@@ -8,23 +8,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="325" HorizontalAlignment="Left" Width="298">
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="369" HorizontalAlignment="Left" Width="298">
             <Grid>
-                <Separator Background="LightGray" Margin="0,35,0,256"/>
-                <Label x:Name="TitleLabel" Content="DATOS DE USUARIO" Margin="0,0,0,274" FontSize="20"/>
-                <Ellipse Fill="Gray" Margin="75,56,82,136" HorizontalAlignment="Center" Width="125"/>
-                <TextBox x:Name="UsuarioBox" materialDesign:HintAssist.Hint="Usuario" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,178,0,79" />
-                <TextBox x:Name="PinBox" materialDesign:HintAssist.Hint="Pin" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,237,0,23" />
+                <Separator Background="LightGray" Margin="0,35,0,299"/>
+                <Label x:Name="TitleLabel" Content="DATOS DE USUARIO" Margin="0,0,0,318" FontSize="20"/>
+                <Ellipse Margin="78,69,84,169" HorizontalAlignment="Center" Width="120">
+                    <Ellipse.Fill>
+                        <ImageBrush  RenderOptions.BitmapScalingMode="HighQuality" ImageSource="/Resources/imgDefaultUser.png" Stretch="Fill"></ImageBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBox x:Name="UsuarioTextBox" materialDesign:HintAssist.Hint="Usuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,205,0,108" />
+                <TextBox x:Name="PinTextBox" materialDesign:HintAssist.Hint="Pin" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,251,0,63" />
+                <ComboBox x:Name="TipoUsuarioCombox" materialDesign:HintAssist.Hint="TipoUsuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="0,290,0,23"/>
+                <Button x:Name="GuardarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="165,54,10,268" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5">
+                    Guardar
+                </Button>
             </Grid>
         </materialDesign:Card>
         <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="450" HorizontalAlignment="Left" Width="470" Margin="330,0,0,0">
             <Grid>
                 <Separator Background="LightGray" Margin="0,35,0,378"/>
                 <Label x:Name="Title2Label" Content="DATOS PERSONALES" Margin="0,0,0,399" FontSize="20"/>
-                <TextBox x:Name="NombreTextBox" materialDesign:HintAssist.Hint="Nombre" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,56,0,324" />
-                <TextBox x:Name="APaternoTextBox" materialDesign:HintAssist.Hint="Apellido Paterno" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,110,0,270" />
-                <TextBox x:Name="AMaternoTextBox" materialDesign:HintAssist.Hint="Apellido Materno" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,164,0,216" />
-                <TextBox x:Name="CorreoTextBox" materialDesign:HintAssist.Hint="Correo" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,218,0,162" />
+                <TextBox x:Name="NombreTextBox" materialDesign:HintAssist.Hint="Nombre" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,40,0,340" />
+                <TextBox x:Name="APaternoTextBox" materialDesign:HintAssist.Hint="Apellido Paterno" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,99,0,281" />
+                <TextBox x:Name="AMaternoTextBox" materialDesign:HintAssist.Hint="Apellido Materno" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,153,0,227" />
+                <TextBox x:Name="CorreoTextBox" materialDesign:HintAssist.Hint="Correo" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,212,0,173" />
+                <DatePicker x:Name="FNacimientoPicker" materialDesign:HintAssist.Hint="Fecha de nacimiento" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="0,266,0,131" />
+                <TextBox x:Name="PesoTextBox" materialDesign:HintAssist.Hint="Peso" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,303,0,82" />
+                <TextBox x:Name="EstaturaTextBox" materialDesign:HintAssist.Hint="Estatura" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,352,0,33" />
             </Grid>
         </materialDesign:Card>
     </Grid>
