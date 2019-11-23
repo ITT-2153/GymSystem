@@ -15,6 +15,7 @@ CREATE TABLE Usuario
 	nombre VARCHAR(20),
 	apaterno VARCHAR(20),
 	amaterno VARCHAR(20),
+	apodo VARCHAR(20),
 	pin VARCHAR(20),
 	imgpath VARCHAR(250),
 	correo VARCHAR(150),
