@@ -1,4 +1,5 @@
-﻿using Presentation.UserControls;
+﻿using Common.Cache;
+using Presentation.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,18 @@ namespace Presentation.Windows
         public Dashboard()
         {
             InitializeComponent();
+            LoadUserData();
+        }
+        private void LoadUserData()
+        {
+            try
+            {
+                UsuarioBrush.ImageSource = new BitmapImage(new Uri(UserCache.ImgPath));
+            }
+            catch
+            {
+                MessageBox.Show("No se encontro imagen");
+            }
         }
         public void SwitchScreen(object sender, string title)
         {

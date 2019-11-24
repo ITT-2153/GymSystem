@@ -157,9 +157,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\OmegaBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\imgDefaultUser.png" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +170,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OmegaBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OmegaWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

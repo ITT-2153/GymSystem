@@ -21,8 +21,8 @@ namespace DataAccess.Repositories
         public UsuarioRepository()
         {
             select = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id";
-            insert = "INSERT INTO";
-            update = "UPDATE";
+            insert = "INSERT INTO Usuario VALUES (@Nombre,@APaterno,@AMaterno,@Apodo,@Pin,@ImgPath,@Correo,@IdTipoUsuario)";
+            update = "UPDATE Usuario SET nombre=@Nombre,apaterno=@APaterno,amaterno=@AMaterno,apodo=@Apodo,pin=@Pin,imgpath=@ImgPath,correo=@Correo,tipousuario_id@IdTipoUsuario WHERE id=@Id";
             delete = "DELETE FROM Usuario WHERE id=@Id";
             login = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id WHERE Usuario.apodo =@Apodo AND Usuario.pin =@Pin";
         }
@@ -31,7 +31,11 @@ namespace DataAccess.Repositories
             parameters = new List<SqlParameter>
             {
                 new SqlParameter("@Nombre", entity.Nombre),
-                new SqlParameter("@Contrasena", entity.Pin),
+                new SqlParameter("@APaterno", entity.ApellidoPaterno),
+                new SqlParameter("@AMaterno", entity.ApellidoMaterno),
+                new SqlParameter("@Apodo", entity.Apodo),
+                new SqlParameter("@Pin", entity.Pin),
+                new SqlParameter("@ImgPath",entity.ImgPath),
                 new SqlParameter("@Correo", entity.Correo),
                 new SqlParameter("@IdTipoUsuario", entity.IdTipoUsuario)
             };
@@ -44,7 +48,11 @@ namespace DataAccess.Repositories
             {
                 new SqlParameter("@Id", entity.Id),
                 new SqlParameter("@Nombre", entity.Nombre),
-                new SqlParameter("@Contrasena", entity.Pin),
+                new SqlParameter("@APaterno", entity.ApellidoPaterno),
+                new SqlParameter("@AMaterno", entity.ApellidoMaterno),
+                new SqlParameter("@Apodo", entity.Apodo),
+                new SqlParameter("@Pin", entity.Pin),
+                new SqlParameter("@ImgPath",entity.ImgPath),
                 new SqlParameter("@Correo", entity.Correo),
                 new SqlParameter("@IdTipoUsuario", entity.IdTipoUsuario)
             };

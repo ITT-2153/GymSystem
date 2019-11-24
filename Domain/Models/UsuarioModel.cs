@@ -58,31 +58,29 @@ namespace Domain.Models
                     Pin = pin,
                     ImgPath = imgPath,
                     Correo = correo,
-                    IdTipoUsuario = Convert.ToInt32(idTipoUsuario),
-                    NombreTipoUsuario = nombreTipoUsuario,
-                    TipoUsuario = Convert.ToChar(tipoUsuario)
+                    IdTipoUsuario = Convert.ToInt32(idTipoUsuario)
                 };
 
                 switch (EntityState)
                 {
                     case EntityState.Added:
                         usuarioRepository.Add(usuarioDataModel);
-                        message = "Registro agregado.";
+                        message = "Usuario agregado.";
                         break;
                     case EntityState.Modified:
                         usuarioRepository.Edit(usuarioDataModel);
-                        message = "Registro editado.";
+                        message = "Usuario editado.";
                         break;
                     case EntityState.Deleted:
                         usuarioRepository.Remove(Convert.ToInt32(id));
-                        message = "Registro eliminado.";
+                        message = "Usuario eliminado.";
                         break;
                 }
             }
             catch (Exception ex)
             {
                 if (ex is System.Data.SqlClient.SqlException sqlEx && sqlEx.Number == 2627)
-                    message = "Registro repetido.";
+                    message = "Usuario repetido.";
                 else
                     message = ex.ToString();
             }

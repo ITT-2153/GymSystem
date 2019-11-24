@@ -11,17 +11,17 @@
                 <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Grey.xaml" />-->
             </ResourceDictionary.MergedDictionaries>
             <!--PRIMARY-->
-            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#000000"/>
-            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#FF5D5C5C"/>
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#e7e7e7"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#1f1f1f"/>
             <!--COLOR USADO PARA EN SELECCION DE TEXBOX Y COLOR NORMAL DE BOTONES-->
-            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#E7B531"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#1f1f1f"/>
             <!--COLOR USADO PARA EN TEXTO SOBRE CONTROLES BOTONES-->
             <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#000000"/>
             <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#000000"/>
             <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#000000"/>
             <!--ACCENT-->
-            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#FFC428"/>
-            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#FFC428"/>
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="White"/>
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="White"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

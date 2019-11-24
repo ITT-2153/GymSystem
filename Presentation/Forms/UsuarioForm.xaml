@@ -14,15 +14,16 @@
                 <Label x:Name="TitleLabel" Content="DATOS DE USUARIO" Margin="0,0,0,318" FontSize="20"/>
                 <Ellipse Margin="78,69,84,169" HorizontalAlignment="Center" Width="120">
                     <Ellipse.Fill>
-                        <ImageBrush  RenderOptions.BitmapScalingMode="HighQuality" ImageSource="/Resources/imgDefaultUser.png" Stretch="Fill"></ImageBrush>
+                        <ImageBrush x:Name="ImagenBrush"  RenderOptions.BitmapScalingMode="HighQuality" ImageSource="/Resources/imgDefaultUser.png" Stretch="Fill"></ImageBrush>
                     </Ellipse.Fill>
                 </Ellipse>
-                <TextBox x:Name="UsuarioTextBox" materialDesign:HintAssist.Hint="Usuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,205,0,108" />
-                <TextBox x:Name="PinTextBox" materialDesign:HintAssist.Hint="Pin" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,251,0,63" />
+                <TextBox x:Name="ApodoTextBox" materialDesign:HintAssist.Hint="Usuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,205,0,108" />
+                <PasswordBox x:Name="PinTextBox" materialDesign:HintAssist.Hint="Pin" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,251,0,63" />
                 <ComboBox x:Name="TipoUsuarioCombox" materialDesign:HintAssist.Hint="TipoUsuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="0,290,0,23"/>
-                <Button x:Name="GuardarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="165,54,10,268" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5">
+                <Button x:Name="GuardarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="165,59,10,263" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Click="GuardarBtn_Click">
                     Guardar
                 </Button>
+                <Button x:Name="SubirImagenBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="10,59,207,263" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Content="Subir" Click="SubirImagenBtn_Click"/>
             </Grid>
         </materialDesign:Card>
         <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="450" HorizontalAlignment="Left" Width="470" Margin="330,0,0,0">
