@@ -42,12 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IClienteRepository.cs" />
     <Compile Include="Contracts\IGenericRepository.cs" />
     <Compile Include="Contracts\ITipoUsuarioRepository.cs" />
     <Compile Include="Contracts\IUsuarioRepository.cs" />
+    <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\TipoUsuario.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\LoginRepository.cs" />
     <Compile Include="Repositories\MasterRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />

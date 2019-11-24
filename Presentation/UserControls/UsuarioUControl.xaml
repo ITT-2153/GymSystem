@@ -10,15 +10,20 @@
     <Grid>
         <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="450">
             <Grid>
-                <Separator Background="LightGray" Margin="0,35,0,378"/>
-                <Label x:Name="TitleLabel" Content="Usuarios" Margin="0,0,0,399" FontSize="20"/>
-                <Button x:Name="AgregarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="674,5,10,397" Foreground="White" HorizontalAlignment="Right" Click="AgregarBtn_Click">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Separator Background="LightGray" Margin="10,35,10,378" Grid.ColumnSpan="2"/>
+                <materialDesign:PackIcon Kind="User" Margin="4,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
+                <Label x:Name="TitleLabel" Content="USUARIOS" Margin="28,2,0,399" FontSize="20" FontFamily="Global User Interface" Grid.ColumnSpan="2"/>
+                <Button x:Name="AgregarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="0,2,10,397" Foreground="White" HorizontalAlignment="Right" Click="AgregarBtn_Click" Grid.Column="1">
                     <Grid>
-                        <TextBlock Text="Agregar" Margin="-3,0,-22,0"/>
-                        <materialDesign:PackIcon Kind="Add" Height="18" Width="18" Margin="-29,1,0,0" />
+                        <TextBlock Text="AGREGAR" Margin="-3,0,-22,0" FontFamily="Global User Interface"/>
+                        <materialDesign:PackIcon Kind="Add" Height="18" Width="18" Margin="-24,0,0,-1" Foreground="White" />
                     </Grid>
                 </Button>
-                <DataGrid x:Name="UsuarioDataGrid" Margin="0,56,0,0" CanUserSortColumns="True" CanUserAddRows="False" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Background="White" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" BorderThickness="0" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEFF3F8" >
+                <DataGrid x:Name="UsuarioDataGrid" Margin="10,56,10,0" CanUserSortColumns="True" CanUserAddRows="False" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Background="White" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" BorderThickness="0" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEFF3F8" Grid.ColumnSpan="2" >
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="Imagen">
                             <DataGridTemplateColumn.CellTemplate>
@@ -52,6 +57,27 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
+                        <!--
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges">
+                                        <ListBox>
+                                            <ListBoxItem>
+                                                Hello World
+                                            </ListBoxItem>
+                                            <ListBoxItem>
+                                                Nice Popup
+                                            </ListBoxItem>
+                                            <ListBoxItem>
+                                                Goodbye.
+                                            </ListBoxItem>
+                                        </ListBox>
+                                    </materialDesign:PopupBox>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        -->
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>

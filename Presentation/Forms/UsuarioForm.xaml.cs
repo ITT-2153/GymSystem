@@ -63,7 +63,7 @@ namespace Presentation.Forms
             APaternoTextBox.Text = aPaterno;
             AMaternoTextBox.Text = aMaterno;
             CorreoTextBox.Text = correo;
-            try
+            /*try
             {
                 FNacimientoPicker.SelectedDate = Convert.ToDateTime(fNacimiento);
             }
@@ -72,7 +72,7 @@ namespace Presentation.Forms
                 MessageBox.Show("Es administrador no cliente");
             }
             PesoTextBox.Text = peso;
-            EstaturaTextBox.Text = estatura;
+            EstaturaTextBox.Text = estatura;*/
         }
 
         private void GuardarBtn_Click(object sender, RoutedEventArgs e)
@@ -93,7 +93,6 @@ namespace Presentation.Forms
             usuario.ApellidoMaterno = AMaternoTextBox.Text;
             usuario.Correo = CorreoTextBox.Text;
             usuario.ImgPath = imagenpath;
-            //CLIENTES
 
             bool validation = new Helps.DataValidation(usuario).Validate();
 

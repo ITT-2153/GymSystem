@@ -31,6 +31,8 @@ namespace Presentation.Windows
             try
             {
                 UsuarioBrush.ImageSource = new BitmapImage(new Uri(UserCache.ImgPath));
+                ApodoLbl.Content = UserCache.Apodo;
+                TipoUsuarioLbl.Content = UserCache.NombreTipoUsuario;
             }
             catch
             {

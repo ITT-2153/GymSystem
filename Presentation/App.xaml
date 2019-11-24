@@ -11,7 +11,7 @@
                 <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Grey.xaml" />-->
             </ResourceDictionary.MergedDictionaries>
             <!--PRIMARY-->
-            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#e7e7e7"/>
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#1f1f1f"/>
             <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#1f1f1f"/>
             <!--COLOR USADO PARA EN SELECCION DE TEXBOX Y COLOR NORMAL DE BOTONES-->
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#1f1f1f"/>
