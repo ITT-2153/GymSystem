@@ -20,8 +20,7 @@
                 </Button>
                 <DataGrid x:Name="UsuarioDataGrid" Margin="0,56,0,0" CanUserSortColumns="True" CanUserAddRows="False" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Background="White" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" BorderThickness="0" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEFF3F8" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
-                        <DataGridTemplateColumn Header="Imagen2">
+                        <DataGridTemplateColumn Header="Imagen">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Image Source="{Binding ImgPath,TargetNullValue=/Resources/imgDefaultUser.png}" Stretch="Fill" Width="50" Height="50"/>
@@ -33,14 +32,12 @@
                         <DataGridTextColumn Header="AMaterno" Binding="{Binding ApellidoMaterno}"/>
                         <DataGridTextColumn Header="Apodo" Binding="{Binding Apodo}"/>
                         <DataGridTextColumn Header="Pin" Binding="{Binding Pin}"/>
-                        <DataGridTextColumn Header="ImgPath" Binding="{Binding ImgPath}"/>
                         <DataGridTextColumn Header="Correo" Binding="{Binding Correo}"/>
-                        <DataGridTextColumn Header="IdTipoUsuario" Binding="{Binding IdTipoUsuario}"/>
                         <DataGridTextColumn Header="NombreTipoUsuario" Binding="{Binding NombreTipoUsuario}"/>
                         <DataGridTemplateColumn Header="Acciones">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="Editar" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Editar" Background="{x:Null}" BorderBrush="{x:Null}">
+                                    <Button x:Name="EditarBtn" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Editar" Background="{x:Null}" BorderBrush="{x:Null}" Click="EditarBtn_Click">
                                         <materialDesign:PackIcon Kind="ModeEdit" Height="24" Width="24" />
                                     </Button>
                                 </DataTemplate>
@@ -49,7 +46,7 @@
                         <DataGridTemplateColumn>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="Eliminar" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Eliminar" Background="{x:Null}" BorderBrush="{x:Null}">
+                                    <Button x:Name="Eliminarbtn" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Eliminar" Background="{x:Null}" BorderBrush="{x:Null}" Click="Eliminarbtn_Click">
                                         <materialDesign:PackIcon Kind="Delete" Height="24" Width="24" />
                                     </Button>
                                 </DataTemplate>

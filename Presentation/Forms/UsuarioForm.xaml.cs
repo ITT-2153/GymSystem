@@ -48,7 +48,14 @@ namespace Presentation.Forms
             isModifying = true;
             idUsuario = id;
             imagenpath = imgPath;
-            ImagenBrush.ImageSource = new BitmapImage(new Uri(imgPath));
+            try
+            {
+                ImagenBrush.ImageSource = new BitmapImage(new Uri(imgPath));
+            }
+            catch
+            {
+                MessageBox.Show("No se encontro imagen");
+            }
             ApodoTextBox.Text = apodo;
             PinTextBox.Password = pin;
             TipoUsuarioCombox.SelectedValue = idTipoUsuario;
@@ -56,7 +63,14 @@ namespace Presentation.Forms
             APaternoTextBox.Text = aPaterno;
             AMaternoTextBox.Text = aMaterno;
             CorreoTextBox.Text = correo;
-            FNacimientoPicker.SelectedDate = Convert.ToDateTime(fNacimiento);
+            try
+            {
+                FNacimientoPicker.SelectedDate = Convert.ToDateTime(fNacimiento);
+            }
+            catch
+            {
+                MessageBox.Show("Es administrador no cliente");
+            }
             PesoTextBox.Text = peso;
             EstaturaTextBox.Text = estatura;
         }

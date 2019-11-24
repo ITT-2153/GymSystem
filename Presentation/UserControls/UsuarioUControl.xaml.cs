@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Domain.ValueObjects;
 using Presentation.Forms;
 using Presentation.Windows;
 using System;
@@ -49,6 +50,56 @@ namespace Presentation.UserControls
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void EditarBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            UsuarioModel selectedModel = (UsuarioModel)UsuarioDataGrid.SelectedItem;
+            UsuarioForm form = new UsuarioForm();
+            form.SetData(selectedModel.Id,
+                         selectedModel.ImgPath,
+                         selectedModel.Apodo,
+                         selectedModel.Pin,
+                         selectedModel.IdTipoUsuario,
+                         selectedModel.Nombre,
+                         selectedModel.ApellidoPaterno,
+                         selectedModel.ApellidoMaterno,
+                         selectedModel.Correo,
+                         "",
+                         "",
+                         ""
+                           );
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(Dashboard))
+                {
+                    (window as Dashboard).SwitchScreen(form, "Usuarios • Editar usuario");
+                }
+            }
+            /*form.ShowDialog();
+            if (form.DialogResult.HasValue && modal.DialogResult.Value)
+            {
+                MessageBox.Show(modal.message);
+                UsuarioDataGrid.ItemsSource = usuario.GetAll();
+            }*/
+        }
+
+        private void Eliminarbtn_Click(object sender, RoutedEventArgs e)
+        {
+            string result = null;
+            UsuarioModel selectedModel = (UsuarioModel)UsuarioDataGrid.SelectedItem;
+            MessageBoxResult response;
+            response = MessageBox.Show("¿Está seguro que desea eliminar el registro seleccionado ?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (response == MessageBoxResult.Yes)
+            {
+
+                usuario.EntityState = EntityState.Deleted;
+                usuario.Id = selectedModel.Id;
+                result = usuario.Savechanges();
+                UsuarioDataGrid.ItemsSource = usuario.GetAll();
+                MessageBox.Show(result);
             }
         }
     }

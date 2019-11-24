@@ -20,10 +20,10 @@
                 <TextBox x:Name="ApodoTextBox" materialDesign:HintAssist.Hint="Usuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,205,0,108" />
                 <PasswordBox x:Name="PinTextBox" materialDesign:HintAssist.Hint="Pin" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,251,0,63" />
                 <ComboBox x:Name="TipoUsuarioCombox" materialDesign:HintAssist.Hint="TipoUsuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="0,290,0,23"/>
-                <Button x:Name="GuardarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="165,59,10,263" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Click="GuardarBtn_Click">
+                <Button x:Name="GuardarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="165,59,10,263" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Foreground="White" Click="GuardarBtn_Click">
                     Guardar
                 </Button>
-                <Button x:Name="SubirImagenBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="10,59,207,263" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Content="Subir" Click="SubirImagenBtn_Click"/>
+                <Button x:Name="SubirImagenBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="10,59,207,263" FontFamily="Global Sans Serif" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Content="Subir" Foreground="White" Click="SubirImagenBtn_Click"/>
             </Grid>
         </materialDesign:Card>
         <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="450" HorizontalAlignment="Left" Width="470" Margin="330,0,0,0">
