@@ -101,6 +101,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\EjercicioUControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\TipoUsuarioUControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,6 +140,9 @@
     </Compile>
     <Compile Include="UserControls\EDashboardUControl.xaml.cs">
       <DependentUpon>EDashboardUControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EjercicioUControl.xaml.cs">
+      <DependentUpon>EjercicioUControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TipoUsuarioUControl.xaml.cs">
       <DependentUpon>TipoUsuarioUControl.xaml</DependentUpon>

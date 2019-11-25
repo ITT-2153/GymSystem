@@ -1,5 +1,6 @@
 ﻿using Domain.Models;
 using Domain.ValueObjects;
+using MaterialDesignThemes.Wpf;
 using Presentation.UserControls;
 using Presentation.Windows;
 using System;
