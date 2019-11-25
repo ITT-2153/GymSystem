@@ -22,6 +22,8 @@ namespace Domain.Models
         private string pin;
         private string imgPath;
         private string correo;
+        private string telefono;
+        private string genero;
         private string idTipoUsuario;
         private string nombreTipoUsuario;
         private string tipoUsuario;
@@ -35,6 +37,8 @@ namespace Domain.Models
         public string Pin { get => pin; set => pin = value; }
         public string ImgPath { get => imgPath; set => imgPath = value; }
         public string Correo { get => correo; set => correo = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
+        public string Genero { get => genero; set => genero = value; }
         public string IdTipoUsuario { get => idTipoUsuario; set => idTipoUsuario = value; }
         public string NombreTipoUsuario { get => nombreTipoUsuario; set => nombreTipoUsuario = value; }
         public string TipoUsuario { get => tipoUsuario; set => tipoUsuario = value; }
@@ -58,6 +62,8 @@ namespace Domain.Models
                     Pin = pin,
                     ImgPath = imgPath,
                     Correo = correo,
+                    Telefono = telefono,
+                    Genero = Convert.ToChar(genero),
                     IdTipoUsuario = Convert.ToInt32(idTipoUsuario)
                 };
 
@@ -102,6 +108,8 @@ namespace Domain.Models
                     pin = item.Pin,
                     imgPath = item.ImgPath,
                     correo = item.Correo,
+                    telefono = item.Telefono,
+                    genero = item.Genero.ToString(),
                     idTipoUsuario = item.IdTipoUsuario.ToString(),
                     nombreTipoUsuario = item.NombreTipoUsuario,
                     tipoUsuario = item.TipoUsuario.ToString()

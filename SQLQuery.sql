@@ -76,15 +76,12 @@ DROP TABLE Ejercicio
 -- INSERTS
 
 INSERT INTO TipoUsuario VALUES 
-('Entrenador','A'),
-('Cliente','C')
+('Administrador','A'),
+('Entrenador','E')
 
 INSERT INTO Usuario VALUES 
-('Usuario2', 'APaterno', 'AMaterno','root','1234','C:\Users\cueva\Downloads\user.jpg','correo@outlook.com',1),
-('Jose Luis', 'Cuevas', 'Landa','admin','1234','EstoEsUnDirectorio','cuevas.joseluis@outlook.com',1),
+('Usuario2', 'APaterno', 'AMaterno','root','1234','C:\Users\cueva\Downloads\user.jpg','correo@outlook.com','6645109193','M',1)
 
-INSERT INTO Cliente VALUES
-(1,'03/04/1997',60.50,160)
 
 --SELECTS
 

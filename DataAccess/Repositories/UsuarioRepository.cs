@@ -20,11 +20,11 @@ namespace DataAccess.Repositories
 
         public UsuarioRepository()
         {
-            select = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id";
-            insert = "INSERT INTO Usuario VALUES (@Nombre,@APaterno,@AMaterno,@Apodo,@Pin,@ImgPath,@Correo,@IdTipoUsuario)";
-            update = "UPDATE Usuario SET nombre=@Nombre, apaterno=@APaterno, amaterno=@AMaterno, apodo=@Apodo, pin=@Pin,imgpath=@ImgPath,correo=@Correo,tipousuario_id=@IdTipoUsuario WHERE id=@Id";
+            select = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, telefono, genero, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id";
+            insert = "INSERT INTO Usuario VALUES (@Nombre,@APaterno,@AMaterno,@Apodo,@Pin,@ImgPath,@Correo,@Telefono,@Genero,@IdTipoUsuario)";
+            update = "UPDATE Usuario SET nombre=@Nombre, apaterno=@APaterno, amaterno=@AMaterno, apodo=@Apodo, pin=@Pin,imgpath=@ImgPath,correo=@Correo, telefono=@Telefono, genero=@Genero, tipousuario_id=@IdTipoUsuario WHERE id=@Id";
             delete = "DELETE FROM Usuario WHERE id=@Id";
-            login = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id WHERE Usuario.apodo =@Apodo AND Usuario.pin =@Pin";
+            login = "SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, telefono, genero, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id WHERE Usuario.apodo =@Apodo AND Usuario.pin =@Pin";
         }
         public int Add(Usuario entity)
         {
@@ -37,6 +37,8 @@ namespace DataAccess.Repositories
                 new SqlParameter("@Pin", entity.Pin),
                 new SqlParameter("@ImgPath",entity.ImgPath),
                 new SqlParameter("@Correo", entity.Correo),
+                new SqlParameter("@Telefono", entity.Telefono),
+                new SqlParameter("@Genero", entity.Genero),
                 new SqlParameter("@IdTipoUsuario", entity.IdTipoUsuario)
             };
             return ExecuteNonQuery(insert);
@@ -54,6 +56,8 @@ namespace DataAccess.Repositories
                 new SqlParameter("@Pin", entity.Pin),
                 new SqlParameter("@ImgPath",entity.ImgPath),
                 new SqlParameter("@Correo", entity.Correo),
+                new SqlParameter("@Telefono", entity.Telefono),
+                new SqlParameter("@Genero", entity.Genero),
                 new SqlParameter("@IdTipoUsuario", entity.IdTipoUsuario)
             };
             return ExecuteNonQuery(update);
@@ -75,9 +79,11 @@ namespace DataAccess.Repositories
                     Pin = item[5].ToString(),
                     ImgPath = item[6].ToString(),
                     Correo = item[7].ToString(),
-                    IdTipoUsuario = Convert.ToInt32(item[8]),
-                    NombreTipoUsuario = item[9].ToString(),
-                    TipoUsuario = Convert.ToChar(item[10])
+                    Telefono = item[8].ToString(),
+                    Genero = Convert.ToChar(item[9]),
+                    IdTipoUsuario = Convert.ToInt32(item[10]),
+                    NombreTipoUsuario = item[11].ToString(),
+                    TipoUsuario = Convert.ToChar(item[12])
 
                 });
             }

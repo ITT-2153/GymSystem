@@ -9,6 +9,6 @@ namespace Common.Cache
     public struct UserType
     {
         public const string Administrador = "A";
-        public const string Cliente = "C";
+        public const string Entrenador = "E";
     }
 }

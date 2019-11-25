@@ -16,6 +16,8 @@ namespace DataAccess.Entities
         public string Pin;
         public string ImgPath;
         public string Correo;
+        public string Telefono;
+        public char Genero;
         public int IdTipoUsuario;
         public string NombreTipoUsuario;
         public char TipoUsuario;

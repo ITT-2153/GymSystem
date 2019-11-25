@@ -67,9 +67,8 @@ namespace Presentation.UserControls
                          selectedModel.ApellidoPaterno,
                          selectedModel.ApellidoMaterno,
                          selectedModel.Correo,
-                         "",
-                         "",
-                         ""
+                         selectedModel.Telefono,
+                         selectedModel.Genero
                            );
             foreach (Window window in Application.Current.Windows)
             {
@@ -101,6 +100,23 @@ namespace Presentation.UserControls
                 UsuarioDataGrid.ItemsSource = usuario.GetAll();
                 MessageBox.Show(result);
             }
+        }
+
+        private void BuscarBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                String searchData = sender.ToString().Remove(0, 33);
+                if (searchData != "")
+                {
+                    UsuarioDataGrid.ItemsSource = usuario.FindBy(searchData);
+                }
+                else
+                {
+                    UsuarioDataGrid.ItemsSource = usuario.GetAll();
+                }
+            }
+            catch { UsuarioDataGrid.ItemsSource = usuario.GetAll(); }
         }
     }
 }

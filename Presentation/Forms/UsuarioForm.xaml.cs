@@ -35,6 +35,7 @@ namespace Presentation.Forms
         {
             InitializeComponent();
             ListTipoUsuarios();
+            FillGenero();
         }
         private void ListTipoUsuarios()
         {
@@ -43,7 +44,12 @@ namespace Presentation.Forms
             TipoUsuarioCombox.SelectedValuePath = "Id";
             //TipoUsuarioCombox.SelectedIndex = 1;
         }
-        public void SetData(string id, string imgPath, string apodo, string pin, string idTipoUsuario, string nombre, string aPaterno, string aMaterno, string correo, string fNacimiento, string peso, string estatura)
+        private void FillGenero()
+        {
+            GeneroCombox.Items.Add("Masculino");
+            GeneroCombox.Items.Add("Femenino");
+        }
+        public void SetData(string id, string imgPath, string apodo, string pin, string idTipoUsuario, string nombre, string aPaterno, string aMaterno, string correo, string telefono, string genero)
         {
             isModifying = true;
             idUsuario = id;
@@ -63,6 +69,13 @@ namespace Presentation.Forms
             APaternoTextBox.Text = aPaterno;
             AMaternoTextBox.Text = aMaterno;
             CorreoTextBox.Text = correo;
+            TelefonoTextBox.Text = telefono;
+            if (genero.Equals("M"))
+            {
+                GeneroCombox.SelectedIndex = 0;
+            }
+            else
+                GeneroCombox.SelectedIndex = 1;
             /*try
             {
                 FNacimientoPicker.SelectedDate = Convert.ToDateTime(fNacimiento);
@@ -93,6 +106,8 @@ namespace Presentation.Forms
             usuario.ApellidoMaterno = AMaternoTextBox.Text;
             usuario.Correo = CorreoTextBox.Text;
             usuario.ImgPath = imagenpath;
+            usuario.Telefono = TelefonoTextBox.Text;
+            usuario.Genero = GeneroCombox.Text.Substring(0, 1);
 
             bool validation = new Helps.DataValidation(usuario).Validate();
 
@@ -130,7 +145,11 @@ namespace Presentation.Forms
                         ImagenBrush.ImageSource = new BitmapImage(new Uri(op.FileName));
                     }
                     else
+                    {
                         MessageBox.Show("El archivo ya existe");
+                        imagenpath = appPath + iName;
+                        ImagenBrush.ImageSource = new BitmapImage(new Uri(op.FileName));
+                    }
                     //ImgPathBox.Text = appPath + iName;
                 }
                 catch (Exception exp)

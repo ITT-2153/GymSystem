@@ -36,9 +36,9 @@ namespace DataAccess.Repositories
                             UserCache.ApellidoMaterno = reader.GetString(3);
                             UserCache.Apodo = reader.GetString(4);
                             UserCache.ImgPath = reader.GetString(6);
-                            UserCache.IdTipoUsuario = reader.GetInt32(8);
-                            UserCache.NombreTipoUsuario = reader.GetString(9);
-                            UserCache.TipoUsuario = Convert.ToChar(reader.GetString(10));
+                            UserCache.IdTipoUsuario = reader.GetInt32(10);
+                            UserCache.NombreTipoUsuario = reader.GetString(11);
+                            UserCache.TipoUsuario = Convert.ToChar(reader.GetString(12));
                         }
                         parameters.Clear();
                         return true;
