@@ -40,6 +40,7 @@ namespace Presentation.Forms
         {
             isModifying = true;
             idTipoUsuario = id;
+            NombreTextBox.Text = nombre;
             TipoUsuarioCombox.SelectedItem = tipoUsuario;
             
         }

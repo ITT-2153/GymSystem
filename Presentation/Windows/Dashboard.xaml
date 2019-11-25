@@ -29,6 +29,11 @@
                         <materialDesign:PackIcon Kind="Account" />
                     </MenuItem.Icon>
                 </MenuItem>
+                <MenuItem x:Name="TiposUsuarios" Header="Tipos de usuario" Click="TiposUsuarios_Click">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="Account" />
+                    </MenuItem.Icon>
+                </MenuItem>
                 <MenuItem Header="Clientes">
                     <MenuItem.Icon>
                         <materialDesign:PackIcon Kind="AccountGroup" />

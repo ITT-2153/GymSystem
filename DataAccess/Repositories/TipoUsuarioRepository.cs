@@ -20,7 +20,7 @@ namespace DataAccess.Repositories
         {
             select = "SELECT * FROM TipoUsuario";
             insert = "INSERT INTO TipoUsuario values(@Nombre, @TipoUsuario)";
-            update = "UPDATE TipoUsuario SET nombre=@Nombre, tusuario=@TipoUsuario WHERE id=@Id";
+            update = "UPDATE TipoUsuario SET nombre=@Nombre, tipousuario=@TipoUsuario WHERE id=@Id";
             delete = "DELETE FROM TipoUsuario WHERE id=@Id";
         }
         public int Add(TipoUsuario entity)
