@@ -20,7 +20,7 @@
                 <Grid Margin="0,4,127,399" Grid.Column="1" HorizontalAlignment="Right" Width="273" Background="#e7e7e7">
                     <Rectangle Fill="#1f1f1f" Margin="0,0,243,0"/>
                     <materialDesign:PackIcon Kind="Search" VerticalAlignment="Center" Height="26" Width="20" Foreground="White" Margin="6,4,0,0"/>
-                    <TextBox x:Name="BuscarBox" materialDesign:HintAssist.Hint="Buscar" materialDesign:TextFieldAssist.DecorationVisibility="Visible" MinWidth="200" FontFamily="Global User Interface" FontSize="14" Margin="31,0,0,0" VerticalAlignment="Center" TextChanged="BuscarBox_TextChanged" Height="31" Background="#e7e7e7" Foreground="#1f1f1f"/>
+                    <TextBox x:Name="BuscarBox" materialDesign:HintAssist.Hint="Buscar" materialDesign:TextFieldAssist.DecorationVisibility="Visible" MinWidth="200" FontFamily="Global User Interface" FontSize="14" Margin="35,0,0,0" VerticalAlignment="Center" TextChanged="BuscarBox_TextChanged" Height="31" Background="#e7e7e7" Foreground="#1f1f1f"/>
                 </Grid>
                 <Button x:Name="AgregarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="0,2,10,397" Foreground="White" HorizontalAlignment="Right" Click="AgregarBtn_Click" Grid.Column="1">
                     <Grid>

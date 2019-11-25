@@ -96,6 +96,8 @@ namespace Presentation.UserControls
 
                 usuario.EntityState = EntityState.Deleted;
                 usuario.Id = selectedModel.Id;
+                usuario.Genero = "0";
+
                 result = usuario.Savechanges();
                 UsuarioDataGrid.ItemsSource = usuario.GetAll();
                 MessageBox.Show(result);

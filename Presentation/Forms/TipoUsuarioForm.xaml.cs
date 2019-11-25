@@ -1,5 +1,7 @@
 ﻿using Domain.Models;
 using Domain.ValueObjects;
+using Presentation.UserControls;
+using Presentation.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,8 +65,29 @@ namespace Presentation.Forms
             {
                 string result = tipoUsuario.Savechanges();
                 MessageBox.Show(result);
+
+                TipoUsuarioUControl control = new TipoUsuarioUControl();
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(Dashboard))
+                    {
+                        (window as Dashboard).SwitchScreen(control, "Tipos de usuarios");
+                    }
+                }
                 //message = result;
                 //DialogResult = true;
+            }
+        }
+
+        private void CancelarBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TipoUsuarioUControl control = new TipoUsuarioUControl();
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(Dashboard))
+                {
+                    (window as Dashboard).SwitchScreen(control, "Tipos de usuarios");
+                }
             }
         }
     }

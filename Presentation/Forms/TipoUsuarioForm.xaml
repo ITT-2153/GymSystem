@@ -16,7 +16,7 @@
                 <TextBox x:Name="NombreTextBox" materialDesign:HintAssist.Hint="Nombre" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="80,71,80,189" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" HorizontalAlignment="Center" Width="266"/>
                 <ComboBox x:Name="TipoUsuarioCombox" materialDesign:HintAssist.Hint="Tipo de usuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="80,130" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" Height="40" HorizontalAlignment="Center" Width="266"/>
                 <Button x:Name="GuardarBtn" Content="GUARDAR" Style="{StaticResource MaterialDesignRaisedButton}" Margin="227,222,80,38" FontFamily="Global User Interface" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Foreground="White" Click="GuardarBtn_Click" FontSize="16"/>
-                <Button x:Name="CancelarBtn" Style="{StaticResource MaterialDesignOutlinedButton}" Content="CANCELAR" FontFamily="Global User Interface" BorderBrush="#FF1F1F1F" Margin="80,221,227,39" Height="Auto" FontSize="16"/>
+                <Button x:Name="CancelarBtn" Style="{StaticResource MaterialDesignOutlinedButton}" Content="CANCELAR" FontFamily="Global User Interface" BorderBrush="#FF1F1F1F" Margin="80,221,227,39" Height="Auto" FontSize="16" Click="CancelarBtn_Click"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

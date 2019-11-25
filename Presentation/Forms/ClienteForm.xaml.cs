@@ -1,6 +1,8 @@
 ﻿using Domain.Models;
 using Domain.ValueObjects;
 using Microsoft.Win32;
+using Presentation.UserControls;
+using Presentation.Windows;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -106,6 +108,15 @@ namespace Presentation.Forms
             {
                 string result = cliente.Savechanges();
                 MessageBox.Show(result);
+
+                ClienteUControl control = new ClienteUControl();
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(Dashboard))
+                    {
+                        (window as Dashboard).SwitchScreen(control, "Clientes");
+                    }
+                }
                 //message = result;
                 //DialogResult = true;
             }
@@ -146,6 +157,18 @@ namespace Presentation.Forms
                 catch (Exception exp)
                 {
                     MessageBox.Show("No es posible abrir el archivo " + exp.Message);
+                }
+            }
+        }
+
+        private void CancelarBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClienteUControl control = new ClienteUControl();
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(Dashboard))
+                {
+                    (window as Dashboard).SwitchScreen(control, "Clientes");
                 }
             }
         }

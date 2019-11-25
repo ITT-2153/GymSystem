@@ -79,9 +79,10 @@ namespace Presentation.UserControls
             response = MessageBox.Show("¿Está seguro que desea eliminar el registro seleccionado ?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (response == MessageBoxResult.Yes)
             {
-
                 tipoUsuario.EntityState = EntityState.Deleted;
                 tipoUsuario.Id = selectedModel.Id;
+                tipoUsuario.TipoUsuario = "0";
+
                 result = tipoUsuario.Savechanges();
                 TipoUsuarioDataGrid.ItemsSource = tipoUsuario.GetAll();
                 MessageBox.Show(result);

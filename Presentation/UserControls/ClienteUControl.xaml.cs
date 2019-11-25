@@ -90,6 +90,8 @@ namespace Presentation.UserControls
 
                 cliente.EntityState = EntityState.Deleted;
                 cliente.Id = selectedModel.Id;
+                cliente.Genero = "0";
+
                 result = cliente.Savechanges();
                 ClienteDataGrid.ItemsSource = cliente.GetAll();
                 MessageBox.Show(result);

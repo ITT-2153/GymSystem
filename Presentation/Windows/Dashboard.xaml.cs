@@ -67,5 +67,10 @@ namespace Presentation.Windows
             ClienteUControl control = new ClienteUControl();
             SwitchScreen(control, "Clientes");
         }
+
+        private void CerrarSesionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
