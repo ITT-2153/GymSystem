@@ -89,6 +89,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\TipoUsuarioUControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\UsuarioUControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +116,9 @@
       <DependentUpon>UsuarioForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helps\DataValidation.cs" />
+    <Compile Include="UserControls\TipoUsuarioUControl.xaml.cs">
+      <DependentUpon>TipoUsuarioUControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UsuarioUControl.xaml.cs">
       <DependentUpon>UsuarioUControl.xaml</DependentUpon>
     </Compile>
