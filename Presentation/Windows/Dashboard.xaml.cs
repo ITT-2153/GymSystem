@@ -61,5 +61,11 @@ namespace Presentation.Windows
             TipoUsuarioUControl control = new TipoUsuarioUControl();
             SwitchScreen(control, "Tipos de usuarios");
         }
+
+        private void Clientes_Click(object sender, RoutedEventArgs e)
+        {
+            ClienteUControl control = new ClienteUControl();
+            SwitchScreen(control, "Clientes");
+        }
     }
 }

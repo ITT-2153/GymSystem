@@ -17,7 +17,8 @@ namespace DataAccess.Entities
         public string ImgPath;
         public string Correo;
         public string FechaNacimiento;
-        public string Peso;
-        public string Estatura;
+        public decimal Peso;
+        public int Estatura;
+        public char Genero;
     }
 }

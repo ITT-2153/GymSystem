@@ -34,7 +34,7 @@
                         <materialDesign:PackIcon Kind="Account" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Clientes">
+                <MenuItem x:Name="Clientes" Header="Clientes" Click="Clientes_Click">
                     <MenuItem.Icon>
                         <materialDesign:PackIcon Kind="AccountGroup" />
                     </MenuItem.Icon>

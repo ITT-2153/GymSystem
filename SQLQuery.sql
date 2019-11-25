@@ -85,8 +85,7 @@ INSERT INTO Usuario VALUES
 
 --SELECTS
 
--- // Login //
 SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario
 	   INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id 
 
-UPDATE Usuario SET nombre='Usuario2', apaterno='APaterno', amaterno='AMaterno',apodo='root',pin='1234',imgpath='C:\Users\cueva\Downloads\user.jpg',correo='correo@outlook.com',tipousuario_id=1 WHERE id=3
+SELECT * FROM Cliente
