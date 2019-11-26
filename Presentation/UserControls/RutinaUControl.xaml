@@ -15,7 +15,7 @@
                     <ColumnDefinition Width="5*"/>
                 </Grid.ColumnDefinitions>
                 <Separator Background="LightGray" Margin="10,35,10,378" Grid.ColumnSpan="2"/>
-                <materialDesign:PackIcon Kind="User" Margin="4,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
+                <materialDesign:PackIcon Kind="Clock" Margin="4,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
                 <Label x:Name="TitleLabel" Content="Rutinas" Margin="28,2,0,399" FontSize="20" FontFamily="Global User Interface" Grid.ColumnSpan="2"/>
                 <Button x:Name="AgregarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="0,2,10,397" Foreground="White" HorizontalAlignment="Right" Click="AgregarBtn_Click" Grid.Column="1">
                     <Grid>

@@ -118,5 +118,19 @@ namespace Presentation.Forms
                 }
             }
         }
+
+        private void EjercicioCombox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            EjercicioDataGrid.Items.Clear();
+            EjercicioModel selectedModel = (EjercicioModel)EjercicioCombox.SelectedItem;
+            EjercicioDataGrid.Items.Add(selectedModel);
+        }
+
+        private void ClienteCombox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClienteDataGrid.Items.Clear();
+            ClienteModel selectedModel = (ClienteModel)ClienteCombox.SelectedItem;
+            ClienteDataGrid.Items.Add(selectedModel);
+        }
     }
 }
