@@ -26,6 +26,10 @@
             <TextBox x:Name="UsuarioTextBox" materialDesign:HintAssist.Hint="Usuario" Margin="73,164,593,230" BorderBrush="{StaticResource PrimaryHueLightBrush}" materialDesign:ColorZoneAssist.Mode="Standard" FontFamily="Global User Interface" FontSize="20" Background="#e7e7e7" Foreground="#1f1f1f" BorderThickness="0,0,0,1"/>
             <PasswordBox x:Name="PinTextBox" materialDesign:HintAssist.Hint="Pin" Margin="193,164,473,230" BorderBrush="{StaticResource PrimaryHueLightBrush}" materialDesign:ColorZoneAssist.Mode="Standard" FontFamily="Global User Interface" FontSize="20" Background="#e7e7e7" Foreground="#1f1f1f" />
             <Button x:Name="EntrarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="86,235,486,157" Height="Auto" Foreground="White" FontSize="22" Background="#24272a" BorderBrush="#ce0e2d" BorderThickness="0" Click="EntrarBtn_Click" FontFamily="Global User Interface" Content="ENTRAR" ClickMode="Press"/>
+            <Grid Margin="86,290,486,86">
+                <Label x:Name="ClienteLoginLbl" Content="Entrar como cliente" HorizontalAlignment="Left" Height="34" Margin="10,12,0,0" VerticalAlignment="Top" Width="166" FontSize="18" Foreground="#1f1f1f" FontFamily="Global User Interface" Background="{x:Null}" Cursor="Hand" MouseLeftButtonDown="ClienteLoginLbl_MouseLeftButtonDown"/>
+                <materialDesign:PackIcon x:Name="ClienteLoginIcon" Kind="LoginVariant" Margin="177,11,0,0" Height="34" Width="21" RenderTransformOrigin="1.048,0.559" Cursor="Hand" MouseLeftButtonDown="ClienteLoginIcon_MouseLeftButtonDown" Foreground="#1f1f1f" />
+            </Grid>
             <!--<Label x:Name="RecuperarLbl" Content="¿Olvidaste tu Usuario / Pin?" HorizontalAlignment="Left" Height="34" Margin="72,287,0,0" VerticalAlignment="Top" Width="236" FontSize="18" Foreground="#FF5D5C5C" FontFamily="Global User Interface" Background="{x:Null}"/>-->
             <Button x:Name="SalirBtn" Style="{DynamicResource MaterialDesignToolButton}" Margin="730,14,18,384" Content="{materialDesign:PackIcon Kind=WindowClose, Size=24}" Foreground="White" Click="SalirBtn_Click"/>
         </Grid>

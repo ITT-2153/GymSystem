@@ -101,6 +101,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\CRutinasUControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\ClienteUControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +126,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UsuarioUControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ClienteDashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ClienteLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,6 +165,9 @@
       <DependentUpon>UsuarioForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helps\DataValidation.cs" />
+    <Compile Include="UserControls\CRutinasUControl.xaml.cs">
+      <DependentUpon>CRutinasUControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ClienteUControl.xaml.cs">
       <DependentUpon>ClienteUControl.xaml</DependentUpon>
     </Compile>
@@ -170,6 +185,12 @@
     </Compile>
     <Compile Include="UserControls\UsuarioUControl.xaml.cs">
       <DependentUpon>UsuarioUControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ClienteDashboard.xaml.cs">
+      <DependentUpon>ClienteDashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ClienteLogin.xaml.cs">
+      <DependentUpon>ClienteLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
@@ -239,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\OmegaWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LoginCliente2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

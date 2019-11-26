@@ -111,5 +111,9 @@ namespace Domain.Models
                                              e.idEjercicio.Contains(filter) ||
                                              e.idCliente.Contains(filter));
         }
+        public IEnumerable<RutinaModel> FindByClienteDia(string idCliente, string dia)
+        {
+            return listRutinas.FindAll(e => e.idCliente.Equals(idCliente) && e.dia.Equals(dia));
+        }
     }
 }

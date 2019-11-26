@@ -9,5 +9,6 @@ namespace DataAccess.Contracts
 {
     public interface IClienteRepository : IGenericRepository<Cliente>
     {
+        bool Login(string user, string pin);
     }
 }

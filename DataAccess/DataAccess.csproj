@@ -54,6 +54,7 @@
     <Compile Include="Entities\TipoUsuario.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClienteLoginRepository.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\EjercicioRepository.cs" />
     <Compile Include="Repositories\LoginRepository.cs" />

@@ -47,7 +47,7 @@ CREATE TABLE Ejercicio
 (
 	id INT IDENTITY,
 	nombre VARCHAR(30),
-	descripcion TEXT,
+	descripcion VARCHAR(250),
 	CONSTRAINT ejercicio_pkey PRIMARY KEY (id)
 )
 

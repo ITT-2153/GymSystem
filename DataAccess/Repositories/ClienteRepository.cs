@@ -10,18 +10,20 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    public class ClienteRepository : MasterRepository, IClienteRepository
+    public class ClienteRepository : ClienteLoginRepository, IClienteRepository
     {
         private readonly string select;
         private readonly string insert;
         private readonly string update;
         private readonly string delete;
+        private readonly string login;
         public ClienteRepository()
         {
             select = "SELECT * FROM Cliente";
             insert = "INSERT INTO Cliente VALUES (@Nombre,@APaterno,@AMaterno,@Apodo,@Pin,@ImgPath,@Correo,@FNacimiento,@Peso,@Estatura,@Genero)";
             update = "UPDATE Cliente SET nombre=@Nombre,apaterno=@APaterno,amaterno=@AMaterno,apodo=@Apodo,pin=@Pin,imgpath=@ImgPath,correo=@Correo,fnacimiento=@FNacimiento,peso=@Peso,estatura=@Estatura,genero=@Genero WHERE id=@Id";
             delete = "DELETE FROM Cliente WHERE id=@Id";
+            login = "SELECT * FROM Cliente WHERE apodo =@Apodo AND pin =@Pin";
         }
         public int Add(Cliente entity)
         {
@@ -86,6 +88,16 @@ namespace DataAccess.Repositories
                 }); ;
             }
             return listClientes;
+        }
+
+        public bool Login(string apodo, string pin)
+        {
+            parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@Apodo", apodo),
+                new SqlParameter("@Pin", pin)
+            };
+            return Login(login);
         }
 
         public int Remove(int id)

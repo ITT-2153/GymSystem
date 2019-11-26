@@ -77,6 +77,20 @@ namespace Presentation
 
         private void SalirBtn_Click(object sender, RoutedEventArgs e)
         {
+            Close();
+        }
+
+        private void ClienteLoginLbl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            ClienteLogin clienteLogin = new ClienteLogin();
+            clienteLogin.Show();
+            this.Close();
+        }
+
+        private void ClienteLoginIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            ClienteLogin clienteLogin = new ClienteLogin();
+            clienteLogin.Show();
             this.Close();
         }
     }

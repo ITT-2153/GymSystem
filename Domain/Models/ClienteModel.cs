@@ -116,6 +116,10 @@ namespace Domain.Models
             }
             return listClientes;
         }
+        public bool LoginCustomer(string apodo, string pin)
+        {
+            return clienteRepository.Login(apodo, pin);
+        }
         public IEnumerable<ClienteModel> FindBy(string filter)
         {
             return listClientes.FindAll(e => e.id.Contains(filter) ||
