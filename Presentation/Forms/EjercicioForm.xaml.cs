@@ -52,7 +52,7 @@ namespace Presentation.Forms
                 ejercicio.EntityState = EntityState.Added;
 
             ejercicio.Nombre = NombreTextBox.Text;
-            ejercicio.Descripcion = DescripcionTextBox.Text;
+            ejercicio.Descripcion = DescripcionTextBox.Text.Substring(0, 4);
 
             bool validation = new Helps.DataValidation(ejercicio).Validate();
 
