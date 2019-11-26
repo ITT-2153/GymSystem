@@ -8,19 +8,40 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="900">
     <Grid>
-        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="179" HorizontalAlignment="Center" Width="260" Margin="10,0,628,0">
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="162" HorizontalAlignment="Center" Width="260" Margin="11,0,629,0">
             <Grid>
-                <Label x:Name="TitleLabel" Content="DATOS DE USUARIO" Margin="0,2,0,127" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <Label x:Name="TitleLabel" Content="Total de clientes" Margin="0,2,0,113" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <Button x:Name="AgregarClienteBtn" Style="{StaticResource MaterialDesignFlatMidBgButton}" ToolTip="Agregar" Margin="10,56,164,30" Height="Auto" Click="AgregarClienteBtn_Click">
+                    <Grid>
+                        <materialDesign:PackIcon Kind="Add" Height="20" Width="20" RenderTransformOrigin="0.1,0.55" Margin="-14,10,0,0" />
+                        <materialDesign:PackIcon Kind="Users" Height="40" Width="40" Margin="8,0,-10,0" />
+                    </Grid>
+                </Button>
+                <Label x:Name="TotalClientesLabel" Content="0" Margin="95,56,10,30" Foreground="#1f1f1f" FontSize="30" FontFamily="Global User Interface" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </Grid>
         </materialDesign:Card>
-        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="179" HorizontalAlignment="Center" Width="260" Margin="312,0,326,0">
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="162" HorizontalAlignment="Center" Width="260" Margin="313,0,327,0">
             <Grid>
-                <Label x:Name="Title2Label" Content="DATOS DE USUARIO" Margin="0,2,0,127" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <Label x:Name="Title2Label" Content="Total de usuarios" Margin="0,2,0,111" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <Button x:Name="AgregarUsuarioBtn" Style="{StaticResource MaterialDesignFlatMidBgButton}" ToolTip="Agregar" Margin="10,56,164,30" Height="Auto" Click="AgregarUsuarioBtn_Click">
+                    <Grid>
+                        <materialDesign:PackIcon Kind="Add" Height="20" Width="20" RenderTransformOrigin="0.1,0.55" Margin="-14,10,0,0" />
+                        <materialDesign:PackIcon Kind="User" Height="40" Width="40" Margin="8,0,-10,0" />
+                    </Grid>
+                </Button>
+                <Label x:Name="TotalUsuariosLabel" Content="0" Margin="95,56,10,30" Foreground="#1f1f1f" FontSize="30" FontFamily="Global User Interface" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </Grid>
         </materialDesign:Card>
-        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="179" HorizontalAlignment="Center" Width="260" Margin="630,0,10,0">
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="162" HorizontalAlignment="Center" Width="260" Margin="630,0,10,0">
             <Grid>
-                <Label x:Name="Title3Label" Content="DATOS DE USUARIO" Margin="0,2,0,127" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <Label x:Name="Title3Label" Content="Total de ejercicios" Margin="0,2,0,112" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <Button x:Name="AgregarEjercicioBtn" Style="{StaticResource MaterialDesignFlatMidBgButton}" ToolTip="Agregar" Margin="10,56,164,30" Height="Auto" Click="AgregarEjercicioBtn_Click">
+                    <Grid>
+                        <materialDesign:PackIcon Kind="Add" Height="20" Width="20" RenderTransformOrigin="0.1,0.55" Margin="-14,10,0,0" />
+                        <materialDesign:PackIcon Kind="Dumbbell" Height="40" Width="40" Margin="8,0,-10,0" />
+                    </Grid>
+                </Button>
+                <Label x:Name="TotalEjerciciosLabel" Content="0" Margin="95,56,10,30" Foreground="#1f1f1f" FontSize="30" FontFamily="Global User Interface" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

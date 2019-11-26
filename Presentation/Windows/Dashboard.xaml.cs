@@ -25,6 +25,9 @@ namespace Presentation.Windows
         {
             InitializeComponent();
             LoadUserData();
+
+            EDashboardUControl control = new EDashboardUControl();
+            SwitchScreen(control, "Dashboard");
         }
         private void LoadUserData()
         {
@@ -83,6 +86,12 @@ namespace Presentation.Windows
         {
             RutinaUControl control = new RutinaUControl();
             SwitchScreen(control, "Rutinas");
+        }
+
+        private void DashboardBtn_Click(object sender, RoutedEventArgs e)
+        {
+            EDashboardUControl control = new EDashboardUControl();
+            SwitchScreen(control, "Dashboard");
         }
     }
 }

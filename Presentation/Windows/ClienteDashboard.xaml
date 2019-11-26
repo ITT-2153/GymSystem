@@ -28,7 +28,6 @@
             </StackPanel>
         </materialDesign:PopupBox>
         <Menu Background="#1f1f1f" Foreground="White" IsMainMenu="True" Margin="0,70,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="18">
-            <MenuItem Header="Dashboard"/>
             <MenuItem x:Name="Rutina" Header="Rutina" Click="Rutina_Click"/>
         </Menu>
         <!--<Rectangle Fill="#eff3f8" VerticalAlignment="Top" HorizontalAlignment="Stretch" Width="830" Margin="0,118,0,0" Height="362"/>-->
@@ -40,7 +39,7 @@
             </Ellipse.Fill>
         </Ellipse>
         <Label x:Name="HomeLbl" Content="Inicio •" Foreground="Black" Margin="18,124,762,349" FontSize="14" FontFamily="Global User Interface"/>
-        <Label x:Name="OptionLbl" Content="Dashboard" Foreground="Gray" Margin="64,124,697,349" FontSize="14" FontFamily="Global User Interface" x:FieldModifier="public"/>
+        <Label x:Name="OptionLbl" Content="Tus rutinas" Foreground="Gray" Margin="64,124,697,349" FontSize="14" FontFamily="Global User Interface" x:FieldModifier="public"/>
         <Grid x:Name="ContainerGrid" Margin="18,156,18,10" Background="Transparent" x:FieldModifier="public"/>
     </Grid>
 </Window>

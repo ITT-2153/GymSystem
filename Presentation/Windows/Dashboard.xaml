@@ -28,7 +28,7 @@
             </StackPanel>
         </materialDesign:PopupBox>
         <Menu Background="#1f1f1f" Foreground="White" IsMainMenu="True" Margin="0,70,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="18">
-            <MenuItem Header="Dashboard"/>
+            <MenuItem x:Name="DashboardBtn" Header="Dashboard" Click="DashboardBtn_Click"/>
             <MenuItem Header="Gestionar">
                 <MenuItem x:Name="Usuarios" Header="Usuarios" Click="Usuarios_Click">
                     <MenuItem.Icon>

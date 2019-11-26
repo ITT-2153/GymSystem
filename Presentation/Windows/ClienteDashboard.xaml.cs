@@ -25,6 +25,8 @@ namespace Presentation.Windows
         {
             InitializeComponent();
             LoadCustomerData();
+            CRutinasUControl control = new CRutinasUControl();
+            SwitchScreen(control, "Tus rutinas");
         }
         private void LoadCustomerData()
         {
@@ -56,7 +58,7 @@ namespace Presentation.Windows
         private void Rutina_Click(object sender, RoutedEventArgs e)
         {
             CRutinasUControl control = new CRutinasUControl();
-            SwitchScreen(control, "Rutinas");
+            SwitchScreen(control, "Tus rutinas");
         }
     }
 }

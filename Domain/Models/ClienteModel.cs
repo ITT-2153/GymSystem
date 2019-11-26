@@ -87,6 +87,8 @@ namespace Domain.Models
             {
                 if (ex is System.Data.SqlClient.SqlException sqlEx && sqlEx.Number == 2627)
                     message = "Cliente repetido.";
+                else if (ex is System.Data.SqlClient.SqlException sqlEx2 && sqlEx2.Number == 547)
+                    message = "No se puede eliminar ya que tiene una rutina asignada.";
                 else
                     message = ex.ToString();
             }

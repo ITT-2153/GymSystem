@@ -10,7 +10,7 @@
     <Grid>
         <Label x:Name="LoginImg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Label.Background>
-                <ImageBrush RenderOptions.BitmapScalingMode="HighQuality" ImageSource="/Resources/LoginCliente2.jpg"/>
+                <ImageBrush RenderOptions.BitmapScalingMode="HighQuality" ImageSource="/Resources/LoginCliente.jpg"/>
             </Label.Background>
         </Label>
         <!--<Image RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/LoginCliente2.jpg" Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
