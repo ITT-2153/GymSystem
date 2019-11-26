@@ -11,7 +11,7 @@
         <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="450" HorizontalAlignment="Center" Width="856">
             <Grid>
                 <Separator Background="LightGray" Margin="10,35,10,369"/>
-                <materialDesign:PackIcon Kind="Users" Margin="8,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
+                <materialDesign:PackIcon Kind="Clock" Margin="8,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
                 <Label x:Name="TitleLabel" Content="DATOS DE LA RUTINA" Margin="32,2,0,399" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
                 <TextBox x:Name="RepeticionesTextBox" materialDesign:HintAssist.Hint="Total de repeticiones" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10,308,659,86" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
                 <TextBox x:Name="PesoTextBox" materialDesign:HintAssist.Hint="Peso (si aplica)" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="211,308,488,86" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />

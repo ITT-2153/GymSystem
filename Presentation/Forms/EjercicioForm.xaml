@@ -11,7 +11,7 @@
         <materialDesign:Card HorizontalAlignment="Center" Background="White" Padding="8" UniformCornerRadius="3" Height="347" Width="442" Margin="209,0,205,0">
             <Grid>
                 <Separator Background="LightGray" Margin="10,35,10,266"/>
-                <materialDesign:PackIcon Kind="User" Margin="4,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
+                <materialDesign:PackIcon Kind="Dumbbell" Margin="4,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
                 <Label x:Name="TitleLabel" Content="DATOS DE EJERCICIO" Margin="28,2,0,296" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
                 <TextBox x:Name="NombreTextBox" materialDesign:HintAssist.Hint="Nombre" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="81,71,79,220" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" HorizontalAlignment="Center" Width="266"/>
                 <TextBox x:Name="DescripcionTextBox" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="81,129,79,0" VerticalAlignment="Top" Height="95" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" materialDesign:HintAssist.Hint="Descripcion" IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" Background="#e7e7e7" Foreground="#1f1f1f" />

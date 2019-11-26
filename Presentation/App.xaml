@@ -17,8 +17,8 @@
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#1f1f1f"/>
             <!--COLOR USADO PARA EN TEXTO SOBRE CONTROLES BOTONES-->
             <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="White"/>
-            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#000000"/>
-            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#000000"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="White"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="White"/>
             <!--ACCENT-->
             <SolidColorBrush x:Key="SecondaryAccentBrush" Color="White"/>
             <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="White"/>
