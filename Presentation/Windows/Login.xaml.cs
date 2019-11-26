@@ -53,10 +53,10 @@ namespace Presentation
                         }
                         else
                         {
-                            /*Normal normal = new Normal();
-                            normal.Show();
-                            normal.Closed += Logout;
-                            this.Hide();*/
+                            Dashboard window1 = new Dashboard();
+                            window1.Show();
+                            window1.Closed += Logout;
+                            this.Hide();
                         }
                     }
                     else

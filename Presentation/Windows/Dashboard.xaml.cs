@@ -72,5 +72,11 @@ namespace Presentation.Windows
         {
             Close();
         }
+
+        private void Ejercicios_Click(object sender, RoutedEventArgs e)
+        {
+            EjercicioUControl control = new EjercicioUControl();
+            SwitchScreen(control, "Ejercicios");
+        }
     }
 }

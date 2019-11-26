@@ -22,13 +22,13 @@
                     <materialDesign:PackIcon Kind="Search" VerticalAlignment="Center" Height="26" Width="20" Foreground="White" Margin="6,4,0,0"/>
                     <TextBox x:Name="BuscarBox" materialDesign:HintAssist.Hint="Buscar" materialDesign:TextFieldAssist.DecorationVisibility="Visible" MinWidth="200" FontFamily="Global User Interface" FontSize="14" Margin="35,0,0,0" VerticalAlignment="Center" Height="31" Background="#e7e7e7" Foreground="#1f1f1f"/>
                 </Grid>
-                <Button x:Name="AgregarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="0,2,10,397" Foreground="White" HorizontalAlignment="Right" Grid.Column="1">
+                <Button x:Name="AgregarBtn" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" Margin="0,2,10,397" Foreground="White" HorizontalAlignment="Right" Grid.Column="1" Click="AgregarBtn_Click">
                     <Grid>
                         <TextBlock Text="AGREGAR" Margin="-3,0,-22,0" FontFamily="Global User Interface"/>
                         <materialDesign:PackIcon Kind="Add" Height="18" Width="18" Margin="-24,0,0,-1" Foreground="White" />
                     </Grid>
                 </Button>
-                <DataGrid x:Name="TipoUsuarioDataGrid" Margin="10,56,10,0" CanUserSortColumns="True" CanUserAddRows="False" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Background="White" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" BorderThickness="0" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEFF3F8" Grid.ColumnSpan="2" >
+                <DataGrid x:Name="EjercicioDataGrid" Margin="10,56,10,0" CanUserSortColumns="True" CanUserAddRows="False" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Background="White" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" BorderThickness="0" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEFF3F8" Grid.ColumnSpan="2" >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" FontFamily="Global User Interface"/>
                         <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" FontFamily="Global User Interface"/>
@@ -36,7 +36,7 @@
                         <DataGridTemplateColumn Header="Acciones">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="EditarBtn" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Editar" Background="{x:Null}" BorderBrush="{x:Null}">
+                                    <Button x:Name="EditarBtn" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Editar" Background="{x:Null}" BorderBrush="{x:Null}" Click="EditarBtn_Click">
                                         <materialDesign:PackIcon Kind="ModeEdit" Height="24" Width="24" />
                                     </Button>
                                 </DataTemplate>
@@ -45,7 +45,7 @@
                         <DataGridTemplateColumn>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="Eliminarbtn" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Eliminar" Background="{x:Null}" BorderBrush="{x:Null}">
+                                    <Button x:Name="Eliminarbtn" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Eliminar" Background="{x:Null}" BorderBrush="{x:Null}" Click="Eliminarbtn_Click">
                                         <materialDesign:PackIcon Kind="Delete" Height="24" Width="24" />
                                     </Button>
                                 </DataTemplate>

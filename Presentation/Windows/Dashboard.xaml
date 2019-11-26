@@ -45,6 +45,11 @@
                         <materialDesign:PackIcon Kind="AccountGroup" />
                     </MenuItem.Icon>
                 </MenuItem>
+                <MenuItem x:Name="Ejercicios" Header="Ejercicios" Click="Ejercicios_Click">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="AccountGroup" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
         </Menu>
         <!--<Rectangle Fill="#eff3f8" VerticalAlignment="Top" HorizontalAlignment="Stretch" Width="830" Margin="0,118,0,0" Height="362"/>-->

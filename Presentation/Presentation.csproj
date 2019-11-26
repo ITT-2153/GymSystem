@@ -85,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\EjercicioForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\TipoUsuarioForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +131,9 @@
     </Compile>
     <Compile Include="Forms\ClienteForm.xaml.cs">
       <DependentUpon>ClienteForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EjercicioForm.xaml.cs">
+      <DependentUpon>EjercicioForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\TipoUsuarioForm.xaml.cs">
       <DependentUpon>TipoUsuarioForm.xaml</DependentUpon>
