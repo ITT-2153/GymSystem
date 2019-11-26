@@ -9,11 +9,13 @@ namespace DataAccess.Entities
     public class Rutina
     {
         public int Id;
-        public string Nombre;
         public string Dia;
         public int Repeticiones;
         public decimal Peso;
         public int IdEjercicio;
-        public int IdUsuario;
+        public string EjercicioNombre;
+        public string EjercicioDescripcion;
+        public int IdCliente;
+        public string ClienteNombre;
     }
 }

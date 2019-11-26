@@ -18,21 +18,20 @@ namespace DataAccess.Repositories
         private readonly string delete;
         public RutinaRepository()
         {
-            select = "SELECT * FROM Rutina";
-            insert = "INSERT INTO Rutina VALUES (@Nombre,@APaterno,@AMaterno,@Apodo,@Pin,@ImgPath,@Correo,@FNacimiento,@Peso,@Estatura,@Genero)";
-            update = "UPDATE Rutina SET nombre=@Nombre,apaterno=@APaterno,amaterno=@AMaterno,apodo=@Apodo,pin=@Pin,imgpath=@ImgPath,correo=@Correo,fnacimiento=@FNacimiento,peso=@Peso,estatura=@Estatura,genero=@Genero WHERE id=@Id";
+            select = "SELECT Rutina.id, dia, repeticiones, Rutina.peso, Ejercicio.id, Ejercicio.nombre, Ejercicio.descripcion, Cliente.id, Cliente.nombre FROM Rutina INNER JOIN Ejercicio ON Rutina.ejercicio_id = Ejercicio.id INNER JOIN Cliente ON Rutina.cliente_id = Cliente.id";
+            insert = "INSERT INTO Rutina VALUES (@Dia,@Repeticiones,@Peso,@IdEjercicio,@IdCliente)";
+            update = "UPDATE Rutina SET dia=@Dia,repeticiones=@Repeticiones,peso=@Peso,ejercicio_id=@IdEjercicio,cliente_id=@IdCliente WHERE id=@Id";
             delete = "DELETE FROM Rutina WHERE id=@Id";
         }
         public int Add(Rutina entity)
         {
             parameters = new List<SqlParameter>
             {
-                new SqlParameter("@Nombre", entity.Nombre),
                 new SqlParameter("@Dia", entity.Dia),
                 new SqlParameter("@Repeticiones", entity.Repeticiones),
                 new SqlParameter("@Peso", entity.Peso),
                 new SqlParameter("@IdEjercicio", entity.IdEjercicio),
-                new SqlParameter("@IdUsuario",entity.IdUsuario)
+                new SqlParameter("@IdCliente",entity.IdCliente)
             };
             return ExecuteNonQuery(insert);
         }
@@ -42,12 +41,11 @@ namespace DataAccess.Repositories
             parameters = new List<SqlParameter>
             {
                 new SqlParameter("@Id", entity.Id),
-                new SqlParameter("@Nombre", entity.Nombre),
                 new SqlParameter("@Dia", entity.Dia),
                 new SqlParameter("@Repeticiones", entity.Repeticiones),
                 new SqlParameter("@Peso", entity.Peso),
                 new SqlParameter("@IdEjercicio", entity.IdEjercicio),
-                new SqlParameter("@IdUsuario",entity.IdUsuario)
+                new SqlParameter("@IdCliente",entity.IdCliente)
             };
             return ExecuteNonQuery(update);
         }
@@ -61,12 +59,14 @@ namespace DataAccess.Repositories
                 listRutinas.Add(new Rutina
                 {
                     Id = Convert.ToInt32(item[0]),
-                    Nombre = item[1].ToString(),
-                    Dia = item[2].ToString(),
-                    Repeticiones = Convert.ToInt32(item[3]),
-                    Peso = Convert.ToDecimal(item[4]),
-                    IdEjercicio = Convert.ToInt32(item[5]),
-                    IdUsuario = Convert.ToInt32(item[6])
+                    Dia = item[1].ToString(),
+                    Repeticiones = Convert.ToInt32(item[2]),
+                    Peso = Convert.ToDecimal(item[3]),
+                    IdEjercicio = Convert.ToInt32(item[4]),
+                    EjercicioNombre = item[5].ToString(),
+                    EjercicioDescripcion = item[6].ToString(),
+                    IdCliente = Convert.ToInt32(item[7]),
+                    ClienteNombre = item[8].ToString()
                 }); ;
             }
             return listRutinas;

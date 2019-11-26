@@ -54,15 +54,14 @@ CREATE TABLE Ejercicio
 CREATE TABLE Rutina
 (
 	id INT IDENTITY,
-	nombre VARCHAR(30),
 	dia VARCHAR(15),
 	repeticiones INT,
 	peso DECIMAL,
 	ejercicio_id INT,
-	usuario_id INT,
+	cliente_id INT,
 	CONSTRAINT rutina_pkey PRIMARY KEY (id),
 	CONSTRAINT ejercicio_fkey FOREIGN KEY (ejercicio_id) REFERENCES Ejercicio(id),
-	CONSTRAINT usuariorutina_fkey FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+	CONSTRAINT clienterutina_fkey FOREIGN KEY (cliente_id) REFERENCES Cliente(id)
 )
 
 -- DROPS
@@ -88,4 +87,6 @@ INSERT INTO Usuario VALUES
 SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario
 	   INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id 
 
-SELECT * FROM Cliente
+SELECT Rutina.id, dia, repeticiones, Rutina.peso, Ejercicio.id, Ejercicio.nombre, Ejercicio.descripcion, Cliente.id, Cliente.nombre FROM Rutina
+	   INNER JOIN Ejercicio ON Rutina.ejercicio_id = Ejercicio.id
+	   INNER JOIN Cliente ON Rutina.cliente_id = Cliente.id

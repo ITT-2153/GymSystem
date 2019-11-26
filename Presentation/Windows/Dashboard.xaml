@@ -47,12 +47,12 @@
                 </MenuItem>
                 <MenuItem x:Name="Ejercicios" Header="Ejercicios" Click="Ejercicios_Click">
                     <MenuItem.Icon>
-                        <materialDesign:PackIcon Kind="AccountGroup" />
+                        <materialDesign:PackIcon Kind="Dumbbell" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem x:Name="Rutinas" Header="Rutinas" Click="Rutinas_Click">
                     <MenuItem.Icon>
-                        <materialDesign:PackIcon Kind="AccountGroup" />
+                        <materialDesign:PackIcon Kind="Clock" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>

@@ -16,21 +16,25 @@ namespace Domain.Models
         private List<RutinaModel> listRutinas;
 
         private string id;
-        private string nombre;
         private string dia;
         private string repeticiones;
         private string peso;
         private string idEjercicio;
-        private string idUsuario;
+        private string ejercicioNombre;
+        private string ejercicioDescripcion;
+        private string idCliente;
+        private string clienteNombre;
 
         public EntityState EntityState { private get; set; }
         public string Id { get => id; set => id = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
         public string Dia { get => dia; set => dia = value; }
         public string Repeticiones { get => repeticiones; set => repeticiones = value; }
         public string Peso { get => peso; set => peso = value; }
         public string IdEjercicio { get => idEjercicio; set => idEjercicio = value; }
-        public string IdUsuario { get => idUsuario; set => idUsuario = value; }
+        public string EjercicioNombre { get => ejercicioNombre; set => ejercicioNombre = value; }
+        public string EjercicioDescripcion { get => ejercicioDescripcion; set => ejercicioDescripcion = value; }
+        public string IdCliente { get => idCliente; set => idCliente = value; }
+        public string ClienteNombre { get => clienteNombre; set => clienteNombre = value; }
 
         public RutinaModel()
         {
@@ -44,12 +48,11 @@ namespace Domain.Models
                 var rutinaDataModel = new Rutina
                 {
                     Id = Convert.ToInt32(id),
-                    Nombre = nombre,
                     Dia = dia,
                     Repeticiones = Convert.ToInt32(repeticiones),
                     Peso = Convert.ToDecimal(peso),
                     IdEjercicio = Convert.ToInt32(idEjercicio),
-                    IdUsuario = Convert.ToInt32(idUsuario)
+                    IdCliente = Convert.ToInt32(idCliente)
                 };
 
                 switch (EntityState)
@@ -86,12 +89,14 @@ namespace Domain.Models
                 listRutinas.Add(new RutinaModel
                 {
                     id = item.Id.ToString(),
-                    nombre = item.Nombre,
                     dia = item.Dia,
                     repeticiones = item.Repeticiones.ToString(),
                     peso = item.Peso.ToString(),
                     idEjercicio = item.IdEjercicio.ToString(),
-                    idUsuario = item.IdUsuario.ToString()
+                    ejercicioNombre = item.EjercicioNombre.ToString(),
+                    ejercicioDescripcion = item.EjercicioDescripcion.ToString(),
+                    idCliente = item.IdCliente.ToString(),
+                    clienteNombre = item.ClienteNombre.ToString()
 
                 });
             }
@@ -100,12 +105,11 @@ namespace Domain.Models
         public IEnumerable<RutinaModel> FindBy(string filter)
         {
             return listRutinas.FindAll(e => e.id.Contains(filter) ||
-                                             e.nombre.Contains(filter) ||
                                              e.dia.Contains(filter) ||
                                              e.repeticiones.Contains(filter) ||
                                              e.peso.Contains(filter) ||
                                              e.idEjercicio.Contains(filter) ||
-                                             e.idUsuario.Contains(filter));
+                                             e.idCliente.Contains(filter));
         }
     }
 }
