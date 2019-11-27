@@ -81,11 +81,19 @@ namespace Presentation.Forms
             else
                 rutina.EntityState = EntityState.Added;
 
-            rutina.Dia = DiaCombox.SelectedValue.ToString();
+            try
+            {
+                rutina.Dia = DiaCombox.SelectedValue.ToString();
+            }
+            catch { }
             rutina.Repeticiones = RepeticionesTextBox.Text;
             rutina.Peso = PesoTextBox.Text;
-            rutina.IdEjercicio = EjercicioCombox.SelectedValue.ToString();
-            rutina.IdCliente = ClienteCombox.SelectedValue.ToString();
+            try
+            {
+                rutina.IdEjercicio = EjercicioCombox.SelectedValue.ToString();
+                rutina.IdCliente = ClienteCombox.SelectedValue.ToString();
+            }
+            catch { }
 
             bool validation = new Helps.DataValidation(rutina).Validate();
 

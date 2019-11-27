@@ -4,6 +4,7 @@ using DataAccess.Repositories;
 using Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,12 +28,19 @@ namespace Domain.Models
 
         public EntityState EntityState { private get; set; }
         public string Id { get => id; set => id = value; }
+        [Required(ErrorMessage = "El campo Dia es obligatorio")]
         public string Dia { get => dia; set => dia = value; }
+        [Required(ErrorMessage = "El campo Repeticiones es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "El campo Repeticiones solo permite numeros")]
         public string Repeticiones { get => repeticiones; set => repeticiones = value; }
+        [Required(ErrorMessage = "El campo Peso es obligatorio")]
+        [Range(0, double.MaxValue, ErrorMessage = "El campo Peso solo permite numeros")]
         public string Peso { get => peso; set => peso = value; }
+        [Required(ErrorMessage = "El campo Ejercicio es obligatorio")]
         public string IdEjercicio { get => idEjercicio; set => idEjercicio = value; }
         public string EjercicioNombre { get => ejercicioNombre; set => ejercicioNombre = value; }
         public string EjercicioDescripcion { get => ejercicioDescripcion; set => ejercicioDescripcion = value; }
+        [Required(ErrorMessage = "El campo Cliente es obligatorio")]
         public string IdCliente { get => idCliente; set => idCliente = value; }
         public string ClienteNombre { get => clienteNombre; set => clienteNombre = value; }
 

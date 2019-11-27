@@ -4,6 +4,7 @@ using DataAccess.Repositories;
 using Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.IO;
 
@@ -30,15 +31,24 @@ namespace Domain.Models
 
         public EntityState EntityState { private get; set; }
         public string Id { get => id; set => id = value; }
+        [Required(ErrorMessage = "El Nombre es necesario")]
         public string Nombre { get => nombre; set => nombre = value; }
+        [Required(ErrorMessage = "{El campo Apellido Paterno es necesario}")]
         public string ApellidoPaterno { get => apellidoPaterno; set => apellidoPaterno = value; }
+        [Required(ErrorMessage = "El campo Apellido Materno es obligatorio")]
         public string ApellidoMaterno { get => apellidoMaterno; set => apellidoMaterno = value; }
+        [Required(ErrorMessage = "El campo Apodo es obligatorio")]
         public string Apodo { get => apodo; set => apodo = value; }
+        [Required(ErrorMessage = "El campo Pin es obligatorio")]
         public string Pin { get => pin; set => pin = value; }
         public string ImgPath { get => imgPath; set => imgPath = value; }
+        [Required(ErrorMessage = "El campo Correo es obligatorio")]
         public string Correo { get => correo; set => correo = value; }
+        [Required(ErrorMessage = "El campo Telefono es obligatorio")]
         public string Telefono { get => telefono; set => telefono = value; }
+        [Required(ErrorMessage = "El campo genero es obligatorio")]
         public string Genero { get => genero; set => genero = value; }
+        [Required(ErrorMessage = "El campo Tipo de Usuario es obligatorio")]
         public string IdTipoUsuario { get => idTipoUsuario; set => idTipoUsuario = value; }
         public string NombreTipoUsuario { get => nombreTipoUsuario; set => nombreTipoUsuario = value; }
         public string TipoUsuario { get => tipoUsuario; set => tipoUsuario = value; }

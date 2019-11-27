@@ -4,6 +4,7 @@ using DataAccess.Repositories;
 using Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,9 @@ namespace Domain.Models
 
         public EntityState EntityState { private get; set; }
         public string Id { get => id; set => id = value; }
+        [Required(ErrorMessage = "El campo Nombre es obligatorio")]
         public string Nombre { get => nombre; set => nombre = value; }
+        [Required(ErrorMessage = "El campo Descripcion es obligatorio")]
         public string Descripcion { get => descripcion; set => descripcion = value; }
 
         public EjercicioModel()

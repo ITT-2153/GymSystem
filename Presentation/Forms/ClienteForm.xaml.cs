@@ -35,7 +35,18 @@ namespace Presentation.Forms
         public ClienteForm()
         {
             InitializeComponent();
+            SetMaxValues();
             FillGenero();
+        }
+        private void SetMaxValues()
+        {
+            NombreTextBox.MaxLength = 20;
+            APaternoTextBox.MaxLength = 20;
+            AMaternoTextBox.MaxLength = 20;
+            ApodoTextBox.MaxLength = 20;
+            PinTextBox.MaxLength = 20;
+            CorreoTextBox.MaxLength = 150;
+
         }
         private void FillGenero()
         {
@@ -97,10 +108,19 @@ namespace Presentation.Forms
             cliente.ApellidoMaterno = AMaternoTextBox.Text;
             cliente.Correo = CorreoTextBox.Text;
             cliente.ImgPath = imagenpath;
-            cliente.FNacimiento = FNacimientoPicker.SelectedDate.ToString().Substring(0,10);
+            try 
+            { 
+                cliente.FNacimiento = FNacimientoPicker.SelectedDate.ToString().Substring(0,10);
+            }
+            catch { }
             cliente.Peso = PesoTextBox.Text;
             cliente.Estatura = EstaturaTextBox.Text;
-            cliente.Genero = GeneroCombox.Text.Substring(0, 1);
+            try
+            {
+                cliente.Genero = GeneroCombox.Text.Substring(0, 1);
+            }
+            catch { }
+
 
             bool validation = new Helps.DataValidation(cliente).Validate();
 

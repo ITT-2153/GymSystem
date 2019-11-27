@@ -4,6 +4,7 @@ using DataAccess.Repositories;
 using Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,16 +31,28 @@ namespace Domain.Models
 
         public EntityState EntityState { private get; set; }
         public string Id { get => id; set => id = value; }
+        [Required(ErrorMessage = "El campo Nombre")]
         public string Nombre { get => nombre; set => nombre = value; }
+        [Required(ErrorMessage = "El campo Apellido Paterno es obligatorio")]
         public string ApellidoPaterno { get => apellidoPaterno; set => apellidoPaterno = value; }
+        [Required(ErrorMessage = "El campo Apellido Materno es obligatorio")]
         public string ApellidoMaterno { get => apellidoMaterno; set => apellidoMaterno = value; }
+        [Required(ErrorMessage = "El campo Apodo es obligatorio")]
         public string Apodo { get => apodo; set => apodo = value; }
+        [Required(ErrorMessage = "El campo Pin es obligatorio")]
         public string Pin { get => pin; set => pin = value; }
         public string ImgPath { get => imgPath; set => imgPath = value; }
+        [Required(ErrorMessage = "El campo Correo es obligatorio")]
         public string Correo { get => correo; set => correo = value; }
+        [Required(ErrorMessage = "El campo Fecha de Nacimiento es obligatorio")]
         public string FNacimiento { get => fnacimiento; set => fnacimiento = value; }
+        [Required(ErrorMessage = "El campo Peso es obligatorio")]
+        [Range(0, double.MaxValue, ErrorMessage = "El campo Peso solo permite numeros")]
         public string Peso { get => peso; set => peso = value; }
+        [Required(ErrorMessage = "El campo Estatura es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "El campo Estatura solo permite numeros")]
         public string Estatura { get => estatura; set => estatura = value; }
+        [Required(ErrorMessage = "El campo Genero es obligatorio")]
         public string Genero { get => genero; set => genero = value; }
 
         public ClienteModel()

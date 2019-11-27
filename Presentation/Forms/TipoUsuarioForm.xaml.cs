@@ -32,7 +32,12 @@ namespace Presentation.Forms
         public TipoUsuarioForm()
         {
             InitializeComponent();
+            SetMaxValues();
             FillTipoUsuarioCombox();
+        }
+        private void SetMaxValues()
+        {
+            NombreTextBox.MaxLength = 20;
         }
         private void FillTipoUsuarioCombox()
         {

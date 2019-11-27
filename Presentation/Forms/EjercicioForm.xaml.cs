@@ -32,6 +32,13 @@ namespace Presentation.Forms
         public EjercicioForm()
         {
             InitializeComponent();
+            SetMaxValues();
+        }
+        private void SetMaxValues()
+        {
+            NombreTextBox.MaxLength = 20;
+            DescripcionTextBox.MaxLength = 250;
+
         }
         public void SetData(string id, string nombre, string descripcion)
         {

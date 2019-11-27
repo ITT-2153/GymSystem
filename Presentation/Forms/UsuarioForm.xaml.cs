@@ -36,8 +36,20 @@ namespace Presentation.Forms
         public UsuarioForm()
         {
             InitializeComponent();
+            SetMaxValues();
             ListTipoUsuarios();
             FillGenero();
+        }
+        private void SetMaxValues()
+        {
+            NombreTextBox.MaxLength = 20;
+            APaternoTextBox.MaxLength = 20;
+            AMaternoTextBox.MaxLength = 20;
+            ApodoTextBox.MaxLength = 20;
+            PinTextBox.MaxLength = 20;
+            CorreoTextBox.MaxLength = 150;
+            TelefonoTextBox.MaxLength = 20;
+
         }
         private void ListTipoUsuarios()
         {
@@ -102,14 +114,22 @@ namespace Presentation.Forms
 
             usuario.Apodo = ApodoTextBox.Text;
             usuario.Pin = PinTextBox.Password;
-            usuario.IdTipoUsuario = TipoUsuarioCombox.SelectedValue.ToString();
+            try 
+            { 
+                usuario.IdTipoUsuario = TipoUsuarioCombox.SelectedValue.ToString();
+            }
+            catch { }
             usuario.Nombre = NombreTextBox.Text;
             usuario.ApellidoPaterno = APaternoTextBox.Text;
             usuario.ApellidoMaterno = AMaternoTextBox.Text;
             usuario.Correo = CorreoTextBox.Text;
             usuario.ImgPath = imagenpath;
             usuario.Telefono = TelefonoTextBox.Text;
-            usuario.Genero = GeneroCombox.Text.Substring(0, 1);
+            try
+            {
+                usuario.Genero = GeneroCombox.Text.Substring(0, 1);
+            }
+            catch { }
 
             bool validation = new Helps.DataValidation(usuario).Validate();
 
